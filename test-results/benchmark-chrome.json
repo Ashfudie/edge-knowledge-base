@@ -1,0 +1,4397 @@
+{
+  "meta": {
+    "appUrl": "http://127.0.0.1:8787/",
+    "chrome": "156.0.8078.76 | Chrome/156.0.0.0",
+    "device": "macOS (Apple Silicon)",
+    "timestamp": "2026-11-01T08:33:28.040Z",
+    "note": "数据来自应用的实际运行：应用内置评测面板（向量化在浏览器本地，检索由 seekdb 执行）"
+  },
+  "results": [
+    {
+      "label": "webgpu-fp16",
+      "requestedBackend": "webgpu",
+      "dtype": "fp16",
+      "browserArgs": [],
+      "initialBadge": "推理后端：WebGPU（GPU 加速）",
+      "badge": "推理后端：WebGPU（GPU 加速）",
+      "modelStatus": "bge-small-zh-v1.5 (ONNX, Xenova 导出) · fp16 · 加载 0.0ms · 512 维",
+      "pageLoadToModelReadyMs": 2018,
+      "backendSwitchReloadMs": 1,
+      "coldRound": {
+        "timestamp": "2026-11-01T08:32:26.468Z",
+        "backend": "webgpu",
+        "dtype": "fp16",
+        "model": "bge-small-zh-v1.5 (ONNX, Xenova 导出)",
+        "corpusSize": 60,
+        "queryCount": 36,
+        "importTimings": {
+          "vectorizeMs": 143.8,
+          "throughputPerSec": 417.2,
+          "writeMs": 49.7,
+          "refreshMs": 407.1
+        },
+        "metrics": {
+          "recall@5": 1,
+          "recall@10": 1,
+          "ndcg@10": 1,
+          "crossLangHitRate10": 0.417
+        },
+        "latencies": {
+          "embedMs": {
+            "median": 5.4,
+            "p90": 8.6
+          },
+          "seekdbMs": {
+            "median": 2.3,
+            "p90": 2.9
+          },
+          "e2eMs": {
+            "median": 9.1,
+            "p90": 13
+          }
+        },
+        "perQuery": [
+          {
+            "q": "q_ob-paxos_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_ob-paxos_zh",
+              "doc_mysql-protocol_zh",
+              "doc_edge-privacy_zh"
+            ]
+          },
+          {
+            "q": "q_ob-paxos_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_ob-paxos_en",
+              "dis_23",
+              "doc_webgpu-standard_en"
+            ]
+          },
+          {
+            "q": "q_seekdb-hnsw_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_seekdb-hnsw_zh",
+              "doc_seekdb-hybrid_zh",
+              "doc_index-refresh_zh"
+            ]
+          },
+          {
+            "q": "q_seekdb-hnsw_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_seekdb-hnsw_en",
+              "doc_index-refresh_en",
+              "doc_seekdb-hybrid_en"
+            ]
+          },
+          {
+            "q": "q_seekdb-hybrid_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_seekdb-hybrid_zh",
+              "doc_seekdb-hnsw_zh",
+              "doc_mysql-protocol_zh"
+            ]
+          },
+          {
+            "q": "q_seekdb-hybrid_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_seekdb-hybrid_en",
+              "doc_mysql-protocol_en",
+              "doc_seekdb-hnsw_en"
+            ]
+          },
+          {
+            "q": "q_webgpu-standard_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_webgpu-standard_zh",
+              "doc_model-cache_zh",
+              "doc_seekdb-hybrid_zh"
+            ]
+          },
+          {
+            "q": "q_webgpu-standard_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_webgpu-standard_en",
+              "doc_transformers-js_en",
+              "dis_13"
+            ]
+          },
+          {
+            "q": "q_ort-web-backends_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_ort-web-backends_zh",
+              "doc_transformers-js_zh",
+              "doc_transformers-js_en"
+            ]
+          },
+          {
+            "q": "q_ort-web-backends_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_ort-web-backends_en",
+              "doc_webgpu-standard_en",
+              "dis_23"
+            ]
+          },
+          {
+            "q": "q_int8-quantization_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_int8-quantization_zh",
+              "doc_embed-batching_zh",
+              "doc_bge-embedding_zh"
+            ]
+          },
+          {
+            "q": "q_int8-quantization_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_int8-quantization_en",
+              "doc_cosine-distance_en",
+              "dis_17"
+            ]
+          },
+          {
+            "q": "q_transformers-js_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_transformers-js_zh",
+              "doc_webgpu-standard_zh",
+              "doc_transformers-js_en"
+            ]
+          },
+          {
+            "q": "q_transformers-js_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_transformers-js_en",
+              "doc_webgpu-standard_en",
+              "dis_13"
+            ]
+          },
+          {
+            "q": "q_bge-embedding_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_bge-embedding_zh",
+              "doc_bge-embedding_en",
+              "doc_cosine-distance_zh"
+            ]
+          },
+          {
+            "q": "q_bge-embedding_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_bge-embedding_en",
+              "doc_rrf-fusion_en",
+              "doc_cosine-distance_en"
+            ]
+          },
+          {
+            "q": "q_rrf-fusion_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_rrf-fusion_zh",
+              "doc_seekdb-hybrid_zh",
+              "doc_cosine-distance_zh"
+            ]
+          },
+          {
+            "q": "q_rrf-fusion_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_rrf-fusion_en",
+              "doc_ob-paxos_en",
+              "doc_seekdb-hybrid_en"
+            ]
+          },
+          {
+            "q": "q_ik-analyzer_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_ik-analyzer_zh",
+              "doc_seekdb-hnsw_en",
+              "doc_seekdb-hybrid_zh"
+            ]
+          },
+          {
+            "q": "q_ik-analyzer_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_ik-analyzer_en",
+              "doc_seekdb-hnsw_en",
+              "doc_seekdb-hybrid_en"
+            ]
+          },
+          {
+            "q": "q_hnsw-params_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_hnsw-params_zh",
+              "doc_seekdb-hybrid_zh",
+              "doc_hnsw-params_en"
+            ]
+          },
+          {
+            "q": "q_hnsw-params_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_hnsw-params_en",
+              "doc_seekdb-hnsw_en",
+              "doc_chunking-strategy_en"
+            ]
+          },
+          {
+            "q": "q_mysql-protocol_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_mysql-protocol_zh",
+              "doc_edge-privacy_zh",
+              "doc_mysql-protocol_en"
+            ]
+          },
+          {
+            "q": "q_mysql-protocol_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_mysql-protocol_en",
+              "doc_seekdb-hnsw_en",
+              "doc_seekdb-hybrid_en"
+            ]
+          },
+          {
+            "q": "q_embed-batching_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_embed-batching_zh",
+              "doc_edge-privacy_zh",
+              "doc_seekdb-hnsw_zh"
+            ]
+          },
+          {
+            "q": "q_embed-batching_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_embed-batching_en",
+              "doc_edge-privacy_en",
+              "doc_seekdb-hnsw_en"
+            ]
+          },
+          {
+            "q": "q_model-cache_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_model-cache_zh",
+              "doc_int8-quantization_zh",
+              "doc_seekdb-hnsw_zh"
+            ]
+          },
+          {
+            "q": "q_model-cache_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_model-cache_en",
+              "doc_ort-web-backends_en",
+              "doc_int8-quantization_en"
+            ]
+          },
+          {
+            "q": "q_cosine-distance_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_cosine-distance_zh",
+              "doc_bge-embedding_zh",
+              "doc_rrf-fusion_zh"
+            ]
+          },
+          {
+            "q": "q_cosine-distance_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_cosine-distance_en",
+              "doc_rrf-fusion_en",
+              "doc_int8-quantization_en"
+            ]
+          },
+          {
+            "q": "q_chunking-strategy_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_chunking-strategy_zh",
+              "doc_index-refresh_zh",
+              "doc_embed-batching_zh"
+            ]
+          },
+          {
+            "q": "q_chunking-strategy_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_chunking-strategy_en",
+              "doc_ob-paxos_en",
+              "doc_edge-privacy_en"
+            ]
+          },
+          {
+            "q": "q_index-refresh_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_index-refresh_zh",
+              "doc_seekdb-hnsw_zh",
+              "doc_edge-privacy_zh"
+            ]
+          },
+          {
+            "q": "q_index-refresh_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_index-refresh_en",
+              "dis_23",
+              "doc_seekdb-hybrid_en"
+            ]
+          },
+          {
+            "q": "q_edge-privacy_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_edge-privacy_zh",
+              "doc_embed-batching_zh",
+              "doc_int8-quantization_zh"
+            ]
+          },
+          {
+            "q": "q_edge-privacy_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_edge-privacy_en",
+              "doc_ob-paxos_en",
+              "doc_bge-embedding_en"
+            ]
+          }
+        ]
+      },
+      "warmRound": {
+        "timestamp": "2026-11-01T08:32:27.709Z",
+        "backend": "webgpu",
+        "dtype": "fp16",
+        "model": "bge-small-zh-v1.5 (ONNX, Xenova 导出)",
+        "corpusSize": 60,
+        "queryCount": 36,
+        "importTimings": {
+          "vectorizeMs": 161.9,
+          "throughputPerSec": 370.6,
+          "writeMs": 18,
+          "refreshMs": 606
+        },
+        "metrics": {
+          "recall@5": 1,
+          "recall@10": 1,
+          "ndcg@10": 1,
+          "crossLangHitRate10": 0.417
+        },
+        "latencies": {
+          "embedMs": {
+            "median": 5.5,
+            "p90": 9.4
+          },
+          "seekdbMs": {
+            "median": 2.2,
+            "p90": 3
+          },
+          "e2eMs": {
+            "median": 9,
+            "p90": 13.8
+          }
+        },
+        "perQuery": [
+          {
+            "q": "q_ob-paxos_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_ob-paxos_zh",
+              "doc_mysql-protocol_zh",
+              "doc_edge-privacy_zh"
+            ]
+          },
+          {
+            "q": "q_ob-paxos_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_ob-paxos_en",
+              "dis_23",
+              "doc_webgpu-standard_en"
+            ]
+          },
+          {
+            "q": "q_seekdb-hnsw_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_seekdb-hnsw_zh",
+              "doc_seekdb-hybrid_zh",
+              "doc_index-refresh_zh"
+            ]
+          },
+          {
+            "q": "q_seekdb-hnsw_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_seekdb-hnsw_en",
+              "doc_index-refresh_en",
+              "doc_seekdb-hybrid_en"
+            ]
+          },
+          {
+            "q": "q_seekdb-hybrid_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_seekdb-hybrid_zh",
+              "doc_seekdb-hnsw_zh",
+              "doc_mysql-protocol_zh"
+            ]
+          },
+          {
+            "q": "q_seekdb-hybrid_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_seekdb-hybrid_en",
+              "doc_mysql-protocol_en",
+              "doc_seekdb-hnsw_en"
+            ]
+          },
+          {
+            "q": "q_webgpu-standard_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_webgpu-standard_zh",
+              "doc_model-cache_zh",
+              "doc_seekdb-hybrid_zh"
+            ]
+          },
+          {
+            "q": "q_webgpu-standard_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_webgpu-standard_en",
+              "doc_transformers-js_en",
+              "dis_13"
+            ]
+          },
+          {
+            "q": "q_ort-web-backends_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_ort-web-backends_zh",
+              "doc_transformers-js_zh",
+              "doc_transformers-js_en"
+            ]
+          },
+          {
+            "q": "q_ort-web-backends_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_ort-web-backends_en",
+              "doc_webgpu-standard_en",
+              "doc_transformers-js_en"
+            ]
+          },
+          {
+            "q": "q_int8-quantization_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_int8-quantization_zh",
+              "doc_embed-batching_zh",
+              "doc_bge-embedding_zh"
+            ]
+          },
+          {
+            "q": "q_int8-quantization_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_int8-quantization_en",
+              "doc_cosine-distance_en",
+              "dis_17"
+            ]
+          },
+          {
+            "q": "q_transformers-js_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_transformers-js_zh",
+              "doc_webgpu-standard_zh",
+              "doc_transformers-js_en"
+            ]
+          },
+          {
+            "q": "q_transformers-js_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_transformers-js_en",
+              "doc_webgpu-standard_en",
+              "dis_13"
+            ]
+          },
+          {
+            "q": "q_bge-embedding_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_bge-embedding_zh",
+              "doc_bge-embedding_en",
+              "doc_cosine-distance_zh"
+            ]
+          },
+          {
+            "q": "q_bge-embedding_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_bge-embedding_en",
+              "doc_rrf-fusion_en",
+              "doc_cosine-distance_en"
+            ]
+          },
+          {
+            "q": "q_rrf-fusion_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_rrf-fusion_zh",
+              "doc_seekdb-hybrid_zh",
+              "doc_cosine-distance_zh"
+            ]
+          },
+          {
+            "q": "q_rrf-fusion_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_rrf-fusion_en",
+              "doc_ob-paxos_en",
+              "doc_seekdb-hybrid_en"
+            ]
+          },
+          {
+            "q": "q_ik-analyzer_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_ik-analyzer_zh",
+              "doc_seekdb-hnsw_en",
+              "doc_seekdb-hybrid_zh"
+            ]
+          },
+          {
+            "q": "q_ik-analyzer_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_ik-analyzer_en",
+              "doc_seekdb-hnsw_en",
+              "doc_seekdb-hybrid_en"
+            ]
+          },
+          {
+            "q": "q_hnsw-params_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_hnsw-params_zh",
+              "doc_seekdb-hybrid_zh",
+              "doc_hnsw-params_en"
+            ]
+          },
+          {
+            "q": "q_hnsw-params_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_hnsw-params_en",
+              "doc_seekdb-hnsw_en",
+              "doc_chunking-strategy_en"
+            ]
+          },
+          {
+            "q": "q_mysql-protocol_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_mysql-protocol_zh",
+              "doc_edge-privacy_zh",
+              "doc_mysql-protocol_en"
+            ]
+          },
+          {
+            "q": "q_mysql-protocol_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_mysql-protocol_en",
+              "doc_seekdb-hnsw_en",
+              "doc_seekdb-hybrid_en"
+            ]
+          },
+          {
+            "q": "q_embed-batching_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_embed-batching_zh",
+              "doc_edge-privacy_zh",
+              "doc_seekdb-hnsw_zh"
+            ]
+          },
+          {
+            "q": "q_embed-batching_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_embed-batching_en",
+              "doc_edge-privacy_en",
+              "doc_seekdb-hnsw_en"
+            ]
+          },
+          {
+            "q": "q_model-cache_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_model-cache_zh",
+              "doc_int8-quantization_zh",
+              "doc_seekdb-hnsw_zh"
+            ]
+          },
+          {
+            "q": "q_model-cache_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_model-cache_en",
+              "doc_ort-web-backends_en",
+              "doc_int8-quantization_en"
+            ]
+          },
+          {
+            "q": "q_cosine-distance_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_cosine-distance_zh",
+              "doc_bge-embedding_zh",
+              "doc_rrf-fusion_zh"
+            ]
+          },
+          {
+            "q": "q_cosine-distance_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_cosine-distance_en",
+              "doc_rrf-fusion_en",
+              "dis_3"
+            ]
+          },
+          {
+            "q": "q_chunking-strategy_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_chunking-strategy_zh",
+              "doc_index-refresh_zh",
+              "doc_embed-batching_zh"
+            ]
+          },
+          {
+            "q": "q_chunking-strategy_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_chunking-strategy_en",
+              "doc_ob-paxos_en",
+              "doc_edge-privacy_en"
+            ]
+          },
+          {
+            "q": "q_index-refresh_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_index-refresh_zh",
+              "doc_seekdb-hnsw_zh",
+              "doc_edge-privacy_zh"
+            ]
+          },
+          {
+            "q": "q_index-refresh_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_index-refresh_en",
+              "dis_23",
+              "doc_seekdb-hybrid_en"
+            ]
+          },
+          {
+            "q": "q_edge-privacy_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_edge-privacy_zh",
+              "doc_embed-batching_zh",
+              "doc_int8-quantization_zh"
+            ]
+          },
+          {
+            "q": "q_edge-privacy_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_edge-privacy_en",
+              "doc_ob-paxos_en",
+              "doc_bge-embedding_en"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "webgpu-fp32",
+      "requestedBackend": "webgpu",
+      "dtype": "fp32",
+      "browserArgs": [],
+      "initialBadge": "推理后端：WebGPU（GPU 加速）",
+      "badge": "推理后端：WebGPU（GPU 加速）",
+      "modelStatus": "bge-small-zh-v1.5 (ONNX, Xenova 导出) · fp32 · 加载 397.0ms · 512 维",
+      "pageLoadToModelReadyMs": 2016,
+      "backendSwitchReloadMs": 504,
+      "coldRound": {
+        "timestamp": "2026-11-01T08:32:33.711Z",
+        "backend": "webgpu",
+        "dtype": "fp32",
+        "model": "bge-small-zh-v1.5 (ONNX, Xenova 导出)",
+        "corpusSize": 60,
+        "queryCount": 36,
+        "importTimings": {
+          "vectorizeMs": 200.4,
+          "throughputPerSec": 299.4,
+          "writeMs": 18.9,
+          "refreshMs": 807.3
+        },
+        "metrics": {
+          "recall@5": 1,
+          "recall@10": 1,
+          "ndcg@10": 1,
+          "crossLangHitRate10": 0.417
+        },
+        "latencies": {
+          "embedMs": {
+            "median": 6.7,
+            "p90": 8.9
+          },
+          "seekdbMs": {
+            "median": 2.3,
+            "p90": 3
+          },
+          "e2eMs": {
+            "median": 10.8,
+            "p90": 13.1
+          }
+        },
+        "perQuery": [
+          {
+            "q": "q_ob-paxos_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_ob-paxos_zh",
+              "doc_mysql-protocol_zh",
+              "doc_edge-privacy_zh"
+            ]
+          },
+          {
+            "q": "q_ob-paxos_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_ob-paxos_en",
+              "dis_23",
+              "doc_webgpu-standard_en"
+            ]
+          },
+          {
+            "q": "q_seekdb-hnsw_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_seekdb-hnsw_zh",
+              "doc_seekdb-hybrid_zh",
+              "doc_index-refresh_zh"
+            ]
+          },
+          {
+            "q": "q_seekdb-hnsw_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_seekdb-hnsw_en",
+              "doc_index-refresh_en",
+              "doc_seekdb-hybrid_en"
+            ]
+          },
+          {
+            "q": "q_seekdb-hybrid_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_seekdb-hybrid_zh",
+              "doc_seekdb-hnsw_zh",
+              "doc_mysql-protocol_zh"
+            ]
+          },
+          {
+            "q": "q_seekdb-hybrid_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_seekdb-hybrid_en",
+              "doc_mysql-protocol_en",
+              "doc_seekdb-hnsw_en"
+            ]
+          },
+          {
+            "q": "q_webgpu-standard_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_webgpu-standard_zh",
+              "doc_model-cache_zh",
+              "doc_seekdb-hybrid_zh"
+            ]
+          },
+          {
+            "q": "q_webgpu-standard_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_webgpu-standard_en",
+              "doc_transformers-js_en",
+              "dis_13"
+            ]
+          },
+          {
+            "q": "q_ort-web-backends_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_ort-web-backends_zh",
+              "doc_transformers-js_zh",
+              "doc_transformers-js_en"
+            ]
+          },
+          {
+            "q": "q_ort-web-backends_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_ort-web-backends_en",
+              "doc_webgpu-standard_en",
+              "doc_ob-paxos_en"
+            ]
+          },
+          {
+            "q": "q_int8-quantization_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_int8-quantization_zh",
+              "doc_embed-batching_zh",
+              "doc_bge-embedding_zh"
+            ]
+          },
+          {
+            "q": "q_int8-quantization_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_int8-quantization_en",
+              "doc_cosine-distance_en",
+              "dis_17"
+            ]
+          },
+          {
+            "q": "q_transformers-js_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_transformers-js_zh",
+              "doc_webgpu-standard_zh",
+              "doc_transformers-js_en"
+            ]
+          },
+          {
+            "q": "q_transformers-js_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_transformers-js_en",
+              "doc_webgpu-standard_en",
+              "dis_13"
+            ]
+          },
+          {
+            "q": "q_bge-embedding_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_bge-embedding_zh",
+              "doc_bge-embedding_en",
+              "doc_cosine-distance_zh"
+            ]
+          },
+          {
+            "q": "q_bge-embedding_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_bge-embedding_en",
+              "doc_rrf-fusion_en",
+              "doc_cosine-distance_en"
+            ]
+          },
+          {
+            "q": "q_rrf-fusion_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_rrf-fusion_zh",
+              "doc_seekdb-hybrid_zh",
+              "doc_cosine-distance_zh"
+            ]
+          },
+          {
+            "q": "q_rrf-fusion_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_rrf-fusion_en",
+              "doc_ob-paxos_en",
+              "doc_seekdb-hybrid_en"
+            ]
+          },
+          {
+            "q": "q_ik-analyzer_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_ik-analyzer_zh",
+              "doc_seekdb-hnsw_en",
+              "doc_seekdb-hybrid_zh"
+            ]
+          },
+          {
+            "q": "q_ik-analyzer_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_ik-analyzer_en",
+              "doc_seekdb-hnsw_en",
+              "doc_seekdb-hybrid_en"
+            ]
+          },
+          {
+            "q": "q_hnsw-params_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_hnsw-params_zh",
+              "doc_seekdb-hybrid_zh",
+              "doc_hnsw-params_en"
+            ]
+          },
+          {
+            "q": "q_hnsw-params_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_hnsw-params_en",
+              "doc_seekdb-hnsw_en",
+              "doc_chunking-strategy_en"
+            ]
+          },
+          {
+            "q": "q_mysql-protocol_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_mysql-protocol_zh",
+              "doc_edge-privacy_zh",
+              "doc_mysql-protocol_en"
+            ]
+          },
+          {
+            "q": "q_mysql-protocol_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_mysql-protocol_en",
+              "doc_seekdb-hnsw_en",
+              "doc_seekdb-hybrid_en"
+            ]
+          },
+          {
+            "q": "q_embed-batching_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_embed-batching_zh",
+              "doc_edge-privacy_zh",
+              "doc_seekdb-hnsw_zh"
+            ]
+          },
+          {
+            "q": "q_embed-batching_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_embed-batching_en",
+              "doc_edge-privacy_en",
+              "doc_seekdb-hnsw_en"
+            ]
+          },
+          {
+            "q": "q_model-cache_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_model-cache_zh",
+              "doc_int8-quantization_zh",
+              "doc_seekdb-hnsw_zh"
+            ]
+          },
+          {
+            "q": "q_model-cache_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_model-cache_en",
+              "doc_ort-web-backends_en",
+              "doc_int8-quantization_en"
+            ]
+          },
+          {
+            "q": "q_cosine-distance_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_cosine-distance_zh",
+              "doc_bge-embedding_zh",
+              "doc_rrf-fusion_zh"
+            ]
+          },
+          {
+            "q": "q_cosine-distance_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_cosine-distance_en",
+              "doc_rrf-fusion_en",
+              "dis_3"
+            ]
+          },
+          {
+            "q": "q_chunking-strategy_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_chunking-strategy_zh",
+              "doc_index-refresh_zh",
+              "doc_embed-batching_zh"
+            ]
+          },
+          {
+            "q": "q_chunking-strategy_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_chunking-strategy_en",
+              "doc_ob-paxos_en",
+              "doc_edge-privacy_en"
+            ]
+          },
+          {
+            "q": "q_index-refresh_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_index-refresh_zh",
+              "doc_seekdb-hnsw_zh",
+              "doc_edge-privacy_zh"
+            ]
+          },
+          {
+            "q": "q_index-refresh_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_index-refresh_en",
+              "dis_23",
+              "doc_seekdb-hybrid_en"
+            ]
+          },
+          {
+            "q": "q_edge-privacy_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_edge-privacy_zh",
+              "doc_embed-batching_zh",
+              "doc_int8-quantization_zh"
+            ]
+          },
+          {
+            "q": "q_edge-privacy_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_edge-privacy_en",
+              "doc_ob-paxos_en",
+              "doc_bge-embedding_en"
+            ]
+          }
+        ]
+      },
+      "warmRound": {
+        "timestamp": "2026-11-01T08:32:34.805Z",
+        "backend": "webgpu",
+        "dtype": "fp32",
+        "model": "bge-small-zh-v1.5 (ONNX, Xenova 导出)",
+        "corpusSize": 60,
+        "queryCount": 36,
+        "importTimings": {
+          "vectorizeMs": 157.8,
+          "throughputPerSec": 380.2,
+          "writeMs": 18.9,
+          "refreshMs": 505.9
+        },
+        "metrics": {
+          "recall@5": 1,
+          "recall@10": 1,
+          "ndcg@10": 1,
+          "crossLangHitRate10": 0.417
+        },
+        "latencies": {
+          "embedMs": {
+            "median": 4.8,
+            "p90": 6.5
+          },
+          "seekdbMs": {
+            "median": 2.3,
+            "p90": 3
+          },
+          "e2eMs": {
+            "median": 8.4,
+            "p90": 10.3
+          }
+        },
+        "perQuery": [
+          {
+            "q": "q_ob-paxos_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_ob-paxos_zh",
+              "doc_mysql-protocol_zh",
+              "doc_edge-privacy_zh"
+            ]
+          },
+          {
+            "q": "q_ob-paxos_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_ob-paxos_en",
+              "dis_23",
+              "doc_webgpu-standard_en"
+            ]
+          },
+          {
+            "q": "q_seekdb-hnsw_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_seekdb-hnsw_zh",
+              "doc_seekdb-hybrid_zh",
+              "doc_index-refresh_zh"
+            ]
+          },
+          {
+            "q": "q_seekdb-hnsw_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_seekdb-hnsw_en",
+              "doc_index-refresh_en",
+              "doc_seekdb-hybrid_en"
+            ]
+          },
+          {
+            "q": "q_seekdb-hybrid_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_seekdb-hybrid_zh",
+              "doc_seekdb-hnsw_zh",
+              "doc_mysql-protocol_zh"
+            ]
+          },
+          {
+            "q": "q_seekdb-hybrid_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_seekdb-hybrid_en",
+              "doc_mysql-protocol_en",
+              "doc_seekdb-hnsw_en"
+            ]
+          },
+          {
+            "q": "q_webgpu-standard_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_webgpu-standard_zh",
+              "doc_model-cache_zh",
+              "doc_seekdb-hybrid_zh"
+            ]
+          },
+          {
+            "q": "q_webgpu-standard_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_webgpu-standard_en",
+              "doc_transformers-js_en",
+              "dis_13"
+            ]
+          },
+          {
+            "q": "q_ort-web-backends_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_ort-web-backends_zh",
+              "doc_transformers-js_zh",
+              "doc_transformers-js_en"
+            ]
+          },
+          {
+            "q": "q_ort-web-backends_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_ort-web-backends_en",
+              "doc_webgpu-standard_en",
+              "doc_ob-paxos_en"
+            ]
+          },
+          {
+            "q": "q_int8-quantization_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_int8-quantization_zh",
+              "doc_embed-batching_zh",
+              "doc_bge-embedding_zh"
+            ]
+          },
+          {
+            "q": "q_int8-quantization_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_int8-quantization_en",
+              "doc_cosine-distance_en",
+              "dis_17"
+            ]
+          },
+          {
+            "q": "q_transformers-js_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_transformers-js_zh",
+              "doc_webgpu-standard_zh",
+              "doc_transformers-js_en"
+            ]
+          },
+          {
+            "q": "q_transformers-js_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_transformers-js_en",
+              "doc_webgpu-standard_en",
+              "dis_13"
+            ]
+          },
+          {
+            "q": "q_bge-embedding_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_bge-embedding_zh",
+              "doc_bge-embedding_en",
+              "doc_cosine-distance_zh"
+            ]
+          },
+          {
+            "q": "q_bge-embedding_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_bge-embedding_en",
+              "doc_rrf-fusion_en",
+              "doc_cosine-distance_en"
+            ]
+          },
+          {
+            "q": "q_rrf-fusion_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_rrf-fusion_zh",
+              "doc_seekdb-hybrid_zh",
+              "doc_cosine-distance_zh"
+            ]
+          },
+          {
+            "q": "q_rrf-fusion_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_rrf-fusion_en",
+              "doc_ob-paxos_en",
+              "doc_seekdb-hybrid_en"
+            ]
+          },
+          {
+            "q": "q_ik-analyzer_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_ik-analyzer_zh",
+              "doc_seekdb-hnsw_en",
+              "doc_seekdb-hybrid_zh"
+            ]
+          },
+          {
+            "q": "q_ik-analyzer_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_ik-analyzer_en",
+              "doc_seekdb-hnsw_en",
+              "doc_seekdb-hybrid_en"
+            ]
+          },
+          {
+            "q": "q_hnsw-params_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_hnsw-params_zh",
+              "doc_seekdb-hybrid_zh",
+              "doc_hnsw-params_en"
+            ]
+          },
+          {
+            "q": "q_hnsw-params_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_hnsw-params_en",
+              "doc_seekdb-hnsw_en",
+              "doc_chunking-strategy_en"
+            ]
+          },
+          {
+            "q": "q_mysql-protocol_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_mysql-protocol_zh",
+              "doc_edge-privacy_zh",
+              "doc_mysql-protocol_en"
+            ]
+          },
+          {
+            "q": "q_mysql-protocol_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_mysql-protocol_en",
+              "doc_seekdb-hnsw_en",
+              "doc_seekdb-hybrid_en"
+            ]
+          },
+          {
+            "q": "q_embed-batching_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_embed-batching_zh",
+              "doc_edge-privacy_zh",
+              "doc_seekdb-hnsw_zh"
+            ]
+          },
+          {
+            "q": "q_embed-batching_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_embed-batching_en",
+              "doc_edge-privacy_en",
+              "doc_seekdb-hnsw_en"
+            ]
+          },
+          {
+            "q": "q_model-cache_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_model-cache_zh",
+              "doc_int8-quantization_zh",
+              "doc_seekdb-hnsw_zh"
+            ]
+          },
+          {
+            "q": "q_model-cache_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_model-cache_en",
+              "doc_ort-web-backends_en",
+              "doc_int8-quantization_en"
+            ]
+          },
+          {
+            "q": "q_cosine-distance_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_cosine-distance_zh",
+              "doc_bge-embedding_zh",
+              "doc_rrf-fusion_zh"
+            ]
+          },
+          {
+            "q": "q_cosine-distance_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_cosine-distance_en",
+              "doc_rrf-fusion_en",
+              "dis_3"
+            ]
+          },
+          {
+            "q": "q_chunking-strategy_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_chunking-strategy_zh",
+              "doc_index-refresh_zh",
+              "doc_embed-batching_zh"
+            ]
+          },
+          {
+            "q": "q_chunking-strategy_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_chunking-strategy_en",
+              "doc_ob-paxos_en",
+              "doc_edge-privacy_en"
+            ]
+          },
+          {
+            "q": "q_index-refresh_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_index-refresh_zh",
+              "doc_seekdb-hnsw_zh",
+              "doc_edge-privacy_zh"
+            ]
+          },
+          {
+            "q": "q_index-refresh_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_index-refresh_en",
+              "dis_23",
+              "doc_seekdb-hybrid_en"
+            ]
+          },
+          {
+            "q": "q_edge-privacy_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_edge-privacy_zh",
+              "doc_embed-batching_zh",
+              "doc_int8-quantization_zh"
+            ]
+          },
+          {
+            "q": "q_edge-privacy_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_edge-privacy_en",
+              "doc_ob-paxos_en",
+              "doc_bge-embedding_en"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "webgpu-q8",
+      "requestedBackend": "webgpu",
+      "dtype": "q8",
+      "browserArgs": [],
+      "initialBadge": "推理后端：WebGPU（GPU 加速）",
+      "badge": "推理后端：WebGPU（GPU 加速）",
+      "modelStatus": "bge-small-zh-v1.5 (ONNX, Xenova 导出) · q8 · 加载 106.4ms · 512 维",
+      "pageLoadToModelReadyMs": 2068,
+      "backendSwitchReloadMs": 504,
+      "coldRound": {
+        "timestamp": "2026-11-01T08:32:44.138Z",
+        "backend": "webgpu",
+        "dtype": "q8",
+        "model": "bge-small-zh-v1.5 (ONNX, Xenova 导出)",
+        "corpusSize": 60,
+        "queryCount": 36,
+        "importTimings": {
+          "vectorizeMs": 2977.2,
+          "throughputPerSec": 20.2,
+          "writeMs": 17.3,
+          "refreshMs": 504.4
+        },
+        "metrics": {
+          "recall@5": 0.75,
+          "recall@10": 0.917,
+          "ndcg@10": 0.517,
+          "crossLangHitRate10": 0.278
+        },
+        "latencies": {
+          "embedMs": {
+            "median": 28.4,
+            "p90": 31.5
+          },
+          "seekdbMs": {
+            "median": 2.2,
+            "p90": 2.4
+          },
+          "e2eMs": {
+            "median": 31.8,
+            "p90": 34.6
+          }
+        },
+        "perQuery": [
+          {
+            "q": "q_ob-paxos_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_ob-paxos_zh",
+              "dis_0",
+              "doc_seekdb-hybrid_zh"
+            ]
+          },
+          {
+            "q": "q_ob-paxos_en",
+            "targetRank": 2,
+            "top3": [
+              "doc_mysql-protocol_en",
+              "doc_ob-paxos_en",
+              "doc_hnsw-params_zh"
+            ]
+          },
+          {
+            "q": "q_seekdb-hnsw_zh",
+            "targetRank": 8,
+            "top3": [
+              "doc_index-refresh_zh",
+              "doc_hnsw-params_zh",
+              "doc_rrf-fusion_zh"
+            ]
+          },
+          {
+            "q": "q_seekdb-hnsw_en",
+            "targetRank": 3,
+            "top3": [
+              "doc_seekdb-hybrid_en",
+              "doc_seekdb-hybrid_zh",
+              "doc_seekdb-hnsw_en"
+            ]
+          },
+          {
+            "q": "q_seekdb-hybrid_zh",
+            "targetRank": 2,
+            "top3": [
+              "doc_rrf-fusion_zh",
+              "doc_seekdb-hybrid_zh",
+              "doc_embed-batching_zh"
+            ]
+          },
+          {
+            "q": "q_seekdb-hybrid_en",
+            "targetRank": 3,
+            "top3": [
+              "dis_19",
+              "doc_seekdb-hybrid_zh",
+              "doc_seekdb-hybrid_en"
+            ]
+          },
+          {
+            "q": "q_webgpu-standard_zh",
+            "targetRank": null,
+            "top3": [
+              "doc_seekdb-hybrid_zh",
+              "doc_index-refresh_zh",
+              "doc_embed-batching_zh"
+            ]
+          },
+          {
+            "q": "q_webgpu-standard_en",
+            "targetRank": 2,
+            "top3": [
+              "doc_seekdb-hybrid_en",
+              "doc_webgpu-standard_en",
+              "dis_8"
+            ]
+          },
+          {
+            "q": "q_ort-web-backends_zh",
+            "targetRank": 3,
+            "top3": [
+              "doc_seekdb-hybrid_zh",
+              "doc_ob-paxos_zh",
+              "doc_ort-web-backends_zh"
+            ]
+          },
+          {
+            "q": "q_ort-web-backends_en",
+            "targetRank": 4,
+            "top3": [
+              "doc_transformers-js_zh",
+              "doc_seekdb-hybrid_en",
+              "doc_seekdb-hybrid_zh"
+            ]
+          },
+          {
+            "q": "q_int8-quantization_zh",
+            "targetRank": 4,
+            "top3": [
+              "doc_embed-batching_zh",
+              "doc_hnsw-params_zh",
+              "doc_ort-web-backends_zh"
+            ]
+          },
+          {
+            "q": "q_int8-quantization_en",
+            "targetRank": 2,
+            "top3": [
+              "doc_seekdb-hybrid_en",
+              "doc_int8-quantization_en",
+              "doc_hnsw-params_zh"
+            ]
+          },
+          {
+            "q": "q_transformers-js_zh",
+            "targetRank": null,
+            "top3": [
+              "doc_embed-batching_zh",
+              "doc_rrf-fusion_zh",
+              "doc_cosine-distance_zh"
+            ]
+          },
+          {
+            "q": "q_transformers-js_en",
+            "targetRank": 2,
+            "top3": [
+              "doc_seekdb-hybrid_en",
+              "doc_transformers-js_en",
+              "doc_hnsw-params_zh"
+            ]
+          },
+          {
+            "q": "q_bge-embedding_zh",
+            "targetRank": 9,
+            "top3": [
+              "doc_cosine-distance_zh",
+              "doc_index-refresh_zh",
+              "doc_seekdb-hybrid_zh"
+            ]
+          },
+          {
+            "q": "q_bge-embedding_en",
+            "targetRank": null,
+            "top3": [
+              "doc_cosine-distance_en",
+              "doc_rrf-fusion_en",
+              "doc_hnsw-params_zh"
+            ]
+          },
+          {
+            "q": "q_rrf-fusion_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_rrf-fusion_zh",
+              "doc_seekdb-hybrid_zh",
+              "doc_index-refresh_zh"
+            ]
+          },
+          {
+            "q": "q_rrf-fusion_en",
+            "targetRank": 4,
+            "top3": [
+              "doc_seekdb-hybrid_en",
+              "doc_rrf-fusion_zh",
+              "doc_seekdb-hybrid_zh"
+            ]
+          },
+          {
+            "q": "q_ik-analyzer_zh",
+            "targetRank": 3,
+            "top3": [
+              "doc_seekdb-hybrid_zh",
+              "doc_ort-web-backends_zh",
+              "doc_ik-analyzer_zh"
+            ]
+          },
+          {
+            "q": "q_ik-analyzer_en",
+            "targetRank": 3,
+            "top3": [
+              "doc_seekdb-hybrid_en",
+              "doc_seekdb-hybrid_zh",
+              "doc_ik-analyzer_en"
+            ]
+          },
+          {
+            "q": "q_hnsw-params_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_hnsw-params_zh",
+              "doc_seekdb-hybrid_zh",
+              "doc_index-refresh_zh"
+            ]
+          },
+          {
+            "q": "q_hnsw-params_en",
+            "targetRank": 2,
+            "top3": [
+              "doc_hnsw-params_zh",
+              "doc_hnsw-params_en",
+              "doc_embed-batching_zh"
+            ]
+          },
+          {
+            "q": "q_mysql-protocol_zh",
+            "targetRank": 5,
+            "top3": [
+              "doc_seekdb-hybrid_zh",
+              "doc_rrf-fusion_zh",
+              "doc_index-refresh_zh"
+            ]
+          },
+          {
+            "q": "q_mysql-protocol_en",
+            "targetRank": 4,
+            "top3": [
+              "doc_seekdb-hybrid_en",
+              "doc_seekdb-hybrid_zh",
+              "doc_hnsw-params_zh"
+            ]
+          },
+          {
+            "q": "q_embed-batching_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_embed-batching_zh",
+              "doc_index-refresh_zh",
+              "doc_hnsw-params_zh"
+            ]
+          },
+          {
+            "q": "q_embed-batching_en",
+            "targetRank": 2,
+            "top3": [
+              "doc_transformers-js_zh",
+              "doc_embed-batching_en",
+              "doc_edge-privacy_en"
+            ]
+          },
+          {
+            "q": "q_model-cache_zh",
+            "targetRank": 6,
+            "top3": [
+              "doc_index-refresh_zh",
+              "doc_embed-batching_zh",
+              "doc_hnsw-params_zh"
+            ]
+          },
+          {
+            "q": "q_model-cache_en",
+            "targetRank": 2,
+            "top3": [
+              "doc_seekdb-hybrid_en",
+              "doc_model-cache_en",
+              "dis_0"
+            ]
+          },
+          {
+            "q": "q_cosine-distance_zh",
+            "targetRank": 4,
+            "top3": [
+              "doc_rrf-fusion_zh",
+              "doc_index-refresh_zh",
+              "doc_hnsw-params_zh"
+            ]
+          },
+          {
+            "q": "q_cosine-distance_en",
+            "targetRank": 3,
+            "top3": [
+              "doc_seekdb-hybrid_en",
+              "doc_hnsw-params_zh",
+              "doc_cosine-distance_en"
+            ]
+          },
+          {
+            "q": "q_chunking-strategy_zh",
+            "targetRank": 8,
+            "top3": [
+              "doc_index-refresh_zh",
+              "doc_embed-batching_zh",
+              "doc_hnsw-params_zh"
+            ]
+          },
+          {
+            "q": "q_chunking-strategy_en",
+            "targetRank": 2,
+            "top3": [
+              "doc_seekdb-hybrid_en",
+              "doc_chunking-strategy_en",
+              "dis_0"
+            ]
+          },
+          {
+            "q": "q_index-refresh_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_index-refresh_zh",
+              "doc_ort-web-backends_zh",
+              "dis_4"
+            ]
+          },
+          {
+            "q": "q_index-refresh_en",
+            "targetRank": 3,
+            "top3": [
+              "doc_seekdb-hybrid_en",
+              "doc_hnsw-params_zh",
+              "doc_index-refresh_en"
+            ]
+          },
+          {
+            "q": "q_edge-privacy_zh",
+            "targetRank": 8,
+            "top3": [
+              "doc_embed-batching_zh",
+              "doc_rrf-fusion_zh",
+              "doc_ort-web-backends_zh"
+            ]
+          },
+          {
+            "q": "q_edge-privacy_en",
+            "targetRank": 9,
+            "top3": [
+              "doc_hnsw-params_en",
+              "doc_hnsw-params_zh",
+              "doc_embed-batching_en"
+            ]
+          }
+        ]
+      },
+      "warmRound": {
+        "timestamp": "2026-11-01T08:32:48.821Z",
+        "backend": "webgpu",
+        "dtype": "q8",
+        "model": "bge-small-zh-v1.5 (ONNX, Xenova 导出)",
+        "corpusSize": 60,
+        "queryCount": 36,
+        "importTimings": {
+          "vectorizeMs": 2900.8,
+          "throughputPerSec": 20.7,
+          "writeMs": 17.4,
+          "refreshMs": 504.7
+        },
+        "metrics": {
+          "recall@5": 0.75,
+          "recall@10": 0.917,
+          "ndcg@10": 0.527,
+          "crossLangHitRate10": 0.278
+        },
+        "latencies": {
+          "embedMs": {
+            "median": 26.7,
+            "p90": 31.1
+          },
+          "seekdbMs": {
+            "median": 2.1,
+            "p90": 2.3
+          },
+          "e2eMs": {
+            "median": 29.9,
+            "p90": 33.9
+          }
+        },
+        "perQuery": [
+          {
+            "q": "q_ob-paxos_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_ob-paxos_zh",
+              "dis_0",
+              "doc_seekdb-hybrid_zh"
+            ]
+          },
+          {
+            "q": "q_ob-paxos_en",
+            "targetRank": 2,
+            "top3": [
+              "doc_mysql-protocol_en",
+              "doc_ob-paxos_en",
+              "doc_hnsw-params_zh"
+            ]
+          },
+          {
+            "q": "q_seekdb-hnsw_zh",
+            "targetRank": 10,
+            "top3": [
+              "doc_index-refresh_zh",
+              "doc_hnsw-params_zh",
+              "doc_rrf-fusion_zh"
+            ]
+          },
+          {
+            "q": "q_seekdb-hnsw_en",
+            "targetRank": 3,
+            "top3": [
+              "doc_seekdb-hybrid_en",
+              "doc_seekdb-hybrid_zh",
+              "doc_seekdb-hnsw_en"
+            ]
+          },
+          {
+            "q": "q_seekdb-hybrid_zh",
+            "targetRank": 5,
+            "top3": [
+              "doc_rrf-fusion_zh",
+              "doc_embed-batching_zh",
+              "doc_index-refresh_zh"
+            ]
+          },
+          {
+            "q": "q_seekdb-hybrid_en",
+            "targetRank": 3,
+            "top3": [
+              "dis_19",
+              "doc_seekdb-hybrid_zh",
+              "doc_seekdb-hybrid_en"
+            ]
+          },
+          {
+            "q": "q_webgpu-standard_zh",
+            "targetRank": null,
+            "top3": [
+              "dis_20",
+              "doc_seekdb-hybrid_zh",
+              "doc_index-refresh_zh"
+            ]
+          },
+          {
+            "q": "q_webgpu-standard_en",
+            "targetRank": 2,
+            "top3": [
+              "doc_seekdb-hybrid_en",
+              "doc_webgpu-standard_en",
+              "dis_8"
+            ]
+          },
+          {
+            "q": "q_ort-web-backends_zh",
+            "targetRank": 3,
+            "top3": [
+              "doc_seekdb-hybrid_zh",
+              "doc_ob-paxos_zh",
+              "doc_ort-web-backends_zh"
+            ]
+          },
+          {
+            "q": "q_ort-web-backends_en",
+            "targetRank": 4,
+            "top3": [
+              "doc_transformers-js_zh",
+              "doc_seekdb-hybrid_en",
+              "doc_seekdb-hybrid_zh"
+            ]
+          },
+          {
+            "q": "q_int8-quantization_zh",
+            "targetRank": 4,
+            "top3": [
+              "doc_embed-batching_zh",
+              "doc_hnsw-params_zh",
+              "doc_ort-web-backends_zh"
+            ]
+          },
+          {
+            "q": "q_int8-quantization_en",
+            "targetRank": 2,
+            "top3": [
+              "doc_seekdb-hybrid_en",
+              "doc_int8-quantization_en",
+              "doc_hnsw-params_zh"
+            ]
+          },
+          {
+            "q": "q_transformers-js_zh",
+            "targetRank": null,
+            "top3": [
+              "doc_embed-batching_zh",
+              "doc_rrf-fusion_zh",
+              "dis_20"
+            ]
+          },
+          {
+            "q": "q_transformers-js_en",
+            "targetRank": 2,
+            "top3": [
+              "doc_seekdb-hybrid_en",
+              "doc_transformers-js_en",
+              "doc_hnsw-params_zh"
+            ]
+          },
+          {
+            "q": "q_bge-embedding_zh",
+            "targetRank": 10,
+            "top3": [
+              "dis_12",
+              "doc_hnsw-params_zh",
+              "doc_index-refresh_zh"
+            ]
+          },
+          {
+            "q": "q_bge-embedding_en",
+            "targetRank": null,
+            "top3": [
+              "doc_cosine-distance_en",
+              "doc_rrf-fusion_en",
+              "doc_hnsw-params_zh"
+            ]
+          },
+          {
+            "q": "q_rrf-fusion_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_rrf-fusion_zh",
+              "doc_index-refresh_zh",
+              "doc_seekdb-hybrid_zh"
+            ]
+          },
+          {
+            "q": "q_rrf-fusion_en",
+            "targetRank": 4,
+            "top3": [
+              "doc_seekdb-hybrid_en",
+              "doc_rrf-fusion_zh",
+              "doc_seekdb-hybrid_zh"
+            ]
+          },
+          {
+            "q": "q_ik-analyzer_zh",
+            "targetRank": 3,
+            "top3": [
+              "doc_seekdb-hybrid_zh",
+              "doc_ort-web-backends_zh",
+              "doc_ik-analyzer_zh"
+            ]
+          },
+          {
+            "q": "q_ik-analyzer_en",
+            "targetRank": 2,
+            "top3": [
+              "doc_seekdb-hybrid_zh",
+              "doc_ik-analyzer_en",
+              "doc_cosine-distance_zh"
+            ]
+          },
+          {
+            "q": "q_hnsw-params_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_hnsw-params_zh",
+              "doc_seekdb-hybrid_zh",
+              "doc_index-refresh_zh"
+            ]
+          },
+          {
+            "q": "q_hnsw-params_en",
+            "targetRank": 2,
+            "top3": [
+              "doc_hnsw-params_zh",
+              "doc_hnsw-params_en",
+              "doc_embed-batching_zh"
+            ]
+          },
+          {
+            "q": "q_mysql-protocol_zh",
+            "targetRank": 4,
+            "top3": [
+              "doc_seekdb-hybrid_zh",
+              "doc_index-refresh_zh",
+              "doc_transformers-js_zh"
+            ]
+          },
+          {
+            "q": "q_mysql-protocol_en",
+            "targetRank": 4,
+            "top3": [
+              "doc_seekdb-hybrid_en",
+              "doc_seekdb-hybrid_zh",
+              "doc_hnsw-params_zh"
+            ]
+          },
+          {
+            "q": "q_embed-batching_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_embed-batching_zh",
+              "doc_index-refresh_zh",
+              "doc_hnsw-params_zh"
+            ]
+          },
+          {
+            "q": "q_embed-batching_en",
+            "targetRank": 2,
+            "top3": [
+              "doc_transformers-js_zh",
+              "doc_embed-batching_en",
+              "doc_edge-privacy_en"
+            ]
+          },
+          {
+            "q": "q_model-cache_zh",
+            "targetRank": 6,
+            "top3": [
+              "doc_index-refresh_zh",
+              "doc_embed-batching_zh",
+              "doc_hnsw-params_zh"
+            ]
+          },
+          {
+            "q": "q_model-cache_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_model-cache_en",
+              "dis_0",
+              "doc_hnsw-params_zh"
+            ]
+          },
+          {
+            "q": "q_cosine-distance_zh",
+            "targetRank": 4,
+            "top3": [
+              "doc_rrf-fusion_zh",
+              "doc_index-refresh_zh",
+              "doc_hnsw-params_zh"
+            ]
+          },
+          {
+            "q": "q_cosine-distance_en",
+            "targetRank": 2,
+            "top3": [
+              "doc_hnsw-params_zh",
+              "doc_cosine-distance_en",
+              "doc_seekdb-hybrid_zh"
+            ]
+          },
+          {
+            "q": "q_chunking-strategy_zh",
+            "targetRank": 9,
+            "top3": [
+              "doc_index-refresh_zh",
+              "doc_embed-batching_zh",
+              "doc_hnsw-params_zh"
+            ]
+          },
+          {
+            "q": "q_chunking-strategy_en",
+            "targetRank": 2,
+            "top3": [
+              "doc_seekdb-hybrid_en",
+              "doc_chunking-strategy_en",
+              "dis_0"
+            ]
+          },
+          {
+            "q": "q_index-refresh_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_index-refresh_zh",
+              "doc_ort-web-backends_zh",
+              "dis_4"
+            ]
+          },
+          {
+            "q": "q_index-refresh_en",
+            "targetRank": 3,
+            "top3": [
+              "doc_seekdb-hybrid_en",
+              "doc_hnsw-params_zh",
+              "doc_index-refresh_en"
+            ]
+          },
+          {
+            "q": "q_edge-privacy_zh",
+            "targetRank": 9,
+            "top3": [
+              "doc_embed-batching_zh",
+              "doc_rrf-fusion_zh",
+              "doc_ort-web-backends_zh"
+            ]
+          },
+          {
+            "q": "q_edge-privacy_en",
+            "targetRank": 9,
+            "top3": [
+              "doc_hnsw-params_en",
+              "doc_hnsw-params_zh",
+              "doc_embed-batching_en"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "wasm-fp16",
+      "requestedBackend": "wasm",
+      "dtype": "fp16",
+      "browserArgs": [],
+      "initialBadge": "推理后端：WebGPU（GPU 加速）",
+      "badge": "推理后端：WASM（CPU）",
+      "modelStatus": "bge-small-zh-v1.5 (ONNX, Xenova 导出) · fp16 · 加载 196.5ms · 512 维",
+      "pageLoadToModelReadyMs": 2027,
+      "backendSwitchReloadMs": 503,
+      "coldRound": {
+        "timestamp": "2026-11-01T08:32:57.674Z",
+        "backend": "wasm",
+        "dtype": "fp16",
+        "model": "bge-small-zh-v1.5 (ONNX, Xenova 导出)",
+        "corpusSize": 60,
+        "queryCount": 36,
+        "importTimings": {
+          "vectorizeMs": 2921.3,
+          "throughputPerSec": 20.5,
+          "writeMs": 16.6,
+          "refreshMs": 506.4
+        },
+        "metrics": {
+          "recall@5": 1,
+          "recall@10": 1,
+          "ndcg@10": 1,
+          "crossLangHitRate10": 0.417
+        },
+        "latencies": {
+          "embedMs": {
+            "median": 18.8,
+            "p90": 21.7
+          },
+          "seekdbMs": {
+            "median": 2.2,
+            "p90": 2.4
+          },
+          "e2eMs": {
+            "median": 22.2,
+            "p90": 24.8
+          }
+        },
+        "perQuery": [
+          {
+            "q": "q_ob-paxos_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_ob-paxos_zh",
+              "doc_mysql-protocol_zh",
+              "doc_edge-privacy_zh"
+            ]
+          },
+          {
+            "q": "q_ob-paxos_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_ob-paxos_en",
+              "dis_23",
+              "doc_webgpu-standard_en"
+            ]
+          },
+          {
+            "q": "q_seekdb-hnsw_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_seekdb-hnsw_zh",
+              "doc_seekdb-hybrid_zh",
+              "doc_index-refresh_zh"
+            ]
+          },
+          {
+            "q": "q_seekdb-hnsw_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_seekdb-hnsw_en",
+              "doc_index-refresh_en",
+              "doc_seekdb-hybrid_en"
+            ]
+          },
+          {
+            "q": "q_seekdb-hybrid_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_seekdb-hybrid_zh",
+              "doc_seekdb-hnsw_zh",
+              "doc_mysql-protocol_zh"
+            ]
+          },
+          {
+            "q": "q_seekdb-hybrid_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_seekdb-hybrid_en",
+              "doc_mysql-protocol_en",
+              "doc_seekdb-hnsw_en"
+            ]
+          },
+          {
+            "q": "q_webgpu-standard_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_webgpu-standard_zh",
+              "doc_model-cache_zh",
+              "doc_seekdb-hybrid_zh"
+            ]
+          },
+          {
+            "q": "q_webgpu-standard_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_webgpu-standard_en",
+              "doc_transformers-js_en",
+              "dis_13"
+            ]
+          },
+          {
+            "q": "q_ort-web-backends_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_ort-web-backends_zh",
+              "doc_transformers-js_zh",
+              "doc_transformers-js_en"
+            ]
+          },
+          {
+            "q": "q_ort-web-backends_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_ort-web-backends_en",
+              "doc_webgpu-standard_en",
+              "doc_ob-paxos_en"
+            ]
+          },
+          {
+            "q": "q_int8-quantization_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_int8-quantization_zh",
+              "doc_embed-batching_zh",
+              "doc_bge-embedding_zh"
+            ]
+          },
+          {
+            "q": "q_int8-quantization_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_int8-quantization_en",
+              "doc_cosine-distance_en",
+              "dis_17"
+            ]
+          },
+          {
+            "q": "q_transformers-js_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_transformers-js_zh",
+              "doc_webgpu-standard_zh",
+              "doc_transformers-js_en"
+            ]
+          },
+          {
+            "q": "q_transformers-js_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_transformers-js_en",
+              "doc_webgpu-standard_en",
+              "dis_13"
+            ]
+          },
+          {
+            "q": "q_bge-embedding_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_bge-embedding_zh",
+              "doc_bge-embedding_en",
+              "doc_cosine-distance_zh"
+            ]
+          },
+          {
+            "q": "q_bge-embedding_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_bge-embedding_en",
+              "doc_rrf-fusion_en",
+              "doc_cosine-distance_en"
+            ]
+          },
+          {
+            "q": "q_rrf-fusion_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_rrf-fusion_zh",
+              "doc_seekdb-hybrid_zh",
+              "doc_cosine-distance_zh"
+            ]
+          },
+          {
+            "q": "q_rrf-fusion_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_rrf-fusion_en",
+              "doc_ob-paxos_en",
+              "doc_seekdb-hybrid_en"
+            ]
+          },
+          {
+            "q": "q_ik-analyzer_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_ik-analyzer_zh",
+              "doc_seekdb-hnsw_en",
+              "doc_seekdb-hybrid_zh"
+            ]
+          },
+          {
+            "q": "q_ik-analyzer_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_ik-analyzer_en",
+              "doc_seekdb-hnsw_en",
+              "doc_seekdb-hybrid_en"
+            ]
+          },
+          {
+            "q": "q_hnsw-params_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_hnsw-params_zh",
+              "doc_seekdb-hybrid_zh",
+              "doc_hnsw-params_en"
+            ]
+          },
+          {
+            "q": "q_hnsw-params_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_hnsw-params_en",
+              "doc_seekdb-hnsw_en",
+              "doc_chunking-strategy_en"
+            ]
+          },
+          {
+            "q": "q_mysql-protocol_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_mysql-protocol_zh",
+              "doc_edge-privacy_zh",
+              "doc_mysql-protocol_en"
+            ]
+          },
+          {
+            "q": "q_mysql-protocol_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_mysql-protocol_en",
+              "doc_seekdb-hnsw_en",
+              "doc_seekdb-hybrid_en"
+            ]
+          },
+          {
+            "q": "q_embed-batching_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_embed-batching_zh",
+              "doc_edge-privacy_zh",
+              "doc_seekdb-hnsw_zh"
+            ]
+          },
+          {
+            "q": "q_embed-batching_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_embed-batching_en",
+              "doc_edge-privacy_en",
+              "doc_seekdb-hnsw_en"
+            ]
+          },
+          {
+            "q": "q_model-cache_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_model-cache_zh",
+              "doc_int8-quantization_zh",
+              "doc_seekdb-hnsw_zh"
+            ]
+          },
+          {
+            "q": "q_model-cache_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_model-cache_en",
+              "doc_ort-web-backends_en",
+              "doc_int8-quantization_en"
+            ]
+          },
+          {
+            "q": "q_cosine-distance_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_cosine-distance_zh",
+              "doc_bge-embedding_zh",
+              "doc_rrf-fusion_zh"
+            ]
+          },
+          {
+            "q": "q_cosine-distance_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_cosine-distance_en",
+              "doc_rrf-fusion_en",
+              "dis_3"
+            ]
+          },
+          {
+            "q": "q_chunking-strategy_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_chunking-strategy_zh",
+              "doc_index-refresh_zh",
+              "doc_embed-batching_zh"
+            ]
+          },
+          {
+            "q": "q_chunking-strategy_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_chunking-strategy_en",
+              "doc_ob-paxos_en",
+              "doc_edge-privacy_en"
+            ]
+          },
+          {
+            "q": "q_index-refresh_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_index-refresh_zh",
+              "doc_seekdb-hnsw_zh",
+              "doc_edge-privacy_zh"
+            ]
+          },
+          {
+            "q": "q_index-refresh_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_index-refresh_en",
+              "dis_23",
+              "doc_seekdb-hybrid_en"
+            ]
+          },
+          {
+            "q": "q_edge-privacy_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_edge-privacy_zh",
+              "doc_embed-batching_zh",
+              "doc_int8-quantization_zh"
+            ]
+          },
+          {
+            "q": "q_edge-privacy_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_edge-privacy_en",
+              "doc_ob-paxos_en",
+              "doc_bge-embedding_en"
+            ]
+          }
+        ]
+      },
+      "warmRound": {
+        "timestamp": "2026-11-01T08:33:02.308Z",
+        "backend": "wasm",
+        "dtype": "fp16",
+        "model": "bge-small-zh-v1.5 (ONNX, Xenova 导出)",
+        "corpusSize": 60,
+        "queryCount": 36,
+        "importTimings": {
+          "vectorizeMs": 2864.9,
+          "throughputPerSec": 20.9,
+          "writeMs": 18.3,
+          "refreshMs": 807.5
+        },
+        "metrics": {
+          "recall@5": 1,
+          "recall@10": 1,
+          "ndcg@10": 1,
+          "crossLangHitRate10": 0.417
+        },
+        "latencies": {
+          "embedMs": {
+            "median": 18.8,
+            "p90": 21.8
+          },
+          "seekdbMs": {
+            "median": 2.2,
+            "p90": 2.6
+          },
+          "e2eMs": {
+            "median": 22.2,
+            "p90": 24.8
+          }
+        },
+        "perQuery": [
+          {
+            "q": "q_ob-paxos_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_ob-paxos_zh",
+              "doc_mysql-protocol_zh",
+              "doc_edge-privacy_zh"
+            ]
+          },
+          {
+            "q": "q_ob-paxos_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_ob-paxos_en",
+              "dis_23",
+              "doc_webgpu-standard_en"
+            ]
+          },
+          {
+            "q": "q_seekdb-hnsw_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_seekdb-hnsw_zh",
+              "doc_seekdb-hybrid_zh",
+              "doc_index-refresh_zh"
+            ]
+          },
+          {
+            "q": "q_seekdb-hnsw_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_seekdb-hnsw_en",
+              "doc_index-refresh_en",
+              "doc_seekdb-hybrid_en"
+            ]
+          },
+          {
+            "q": "q_seekdb-hybrid_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_seekdb-hybrid_zh",
+              "doc_seekdb-hnsw_zh",
+              "doc_mysql-protocol_zh"
+            ]
+          },
+          {
+            "q": "q_seekdb-hybrid_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_seekdb-hybrid_en",
+              "doc_mysql-protocol_en",
+              "doc_seekdb-hnsw_en"
+            ]
+          },
+          {
+            "q": "q_webgpu-standard_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_webgpu-standard_zh",
+              "doc_model-cache_zh",
+              "doc_seekdb-hybrid_zh"
+            ]
+          },
+          {
+            "q": "q_webgpu-standard_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_webgpu-standard_en",
+              "doc_transformers-js_en",
+              "dis_13"
+            ]
+          },
+          {
+            "q": "q_ort-web-backends_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_ort-web-backends_zh",
+              "doc_transformers-js_zh",
+              "doc_transformers-js_en"
+            ]
+          },
+          {
+            "q": "q_ort-web-backends_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_ort-web-backends_en",
+              "doc_webgpu-standard_en",
+              "doc_ob-paxos_en"
+            ]
+          },
+          {
+            "q": "q_int8-quantization_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_int8-quantization_zh",
+              "doc_embed-batching_zh",
+              "doc_bge-embedding_zh"
+            ]
+          },
+          {
+            "q": "q_int8-quantization_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_int8-quantization_en",
+              "doc_cosine-distance_en",
+              "dis_17"
+            ]
+          },
+          {
+            "q": "q_transformers-js_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_transformers-js_zh",
+              "doc_webgpu-standard_zh",
+              "doc_transformers-js_en"
+            ]
+          },
+          {
+            "q": "q_transformers-js_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_transformers-js_en",
+              "doc_webgpu-standard_en",
+              "dis_13"
+            ]
+          },
+          {
+            "q": "q_bge-embedding_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_bge-embedding_zh",
+              "doc_bge-embedding_en",
+              "doc_cosine-distance_zh"
+            ]
+          },
+          {
+            "q": "q_bge-embedding_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_bge-embedding_en",
+              "doc_rrf-fusion_en",
+              "doc_cosine-distance_en"
+            ]
+          },
+          {
+            "q": "q_rrf-fusion_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_rrf-fusion_zh",
+              "doc_seekdb-hybrid_zh",
+              "doc_cosine-distance_zh"
+            ]
+          },
+          {
+            "q": "q_rrf-fusion_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_rrf-fusion_en",
+              "doc_ob-paxos_en",
+              "doc_seekdb-hybrid_en"
+            ]
+          },
+          {
+            "q": "q_ik-analyzer_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_ik-analyzer_zh",
+              "doc_seekdb-hnsw_en",
+              "doc_seekdb-hybrid_zh"
+            ]
+          },
+          {
+            "q": "q_ik-analyzer_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_ik-analyzer_en",
+              "doc_seekdb-hnsw_en",
+              "doc_seekdb-hybrid_en"
+            ]
+          },
+          {
+            "q": "q_hnsw-params_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_hnsw-params_zh",
+              "doc_seekdb-hybrid_zh",
+              "doc_hnsw-params_en"
+            ]
+          },
+          {
+            "q": "q_hnsw-params_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_hnsw-params_en",
+              "doc_seekdb-hnsw_en",
+              "doc_chunking-strategy_en"
+            ]
+          },
+          {
+            "q": "q_mysql-protocol_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_mysql-protocol_zh",
+              "doc_edge-privacy_zh",
+              "doc_mysql-protocol_en"
+            ]
+          },
+          {
+            "q": "q_mysql-protocol_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_mysql-protocol_en",
+              "doc_seekdb-hnsw_en",
+              "doc_seekdb-hybrid_en"
+            ]
+          },
+          {
+            "q": "q_embed-batching_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_embed-batching_zh",
+              "doc_edge-privacy_zh",
+              "doc_seekdb-hnsw_zh"
+            ]
+          },
+          {
+            "q": "q_embed-batching_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_embed-batching_en",
+              "doc_edge-privacy_en",
+              "doc_seekdb-hnsw_en"
+            ]
+          },
+          {
+            "q": "q_model-cache_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_model-cache_zh",
+              "doc_int8-quantization_zh",
+              "doc_seekdb-hnsw_zh"
+            ]
+          },
+          {
+            "q": "q_model-cache_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_model-cache_en",
+              "doc_ort-web-backends_en",
+              "doc_int8-quantization_en"
+            ]
+          },
+          {
+            "q": "q_cosine-distance_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_cosine-distance_zh",
+              "doc_bge-embedding_zh",
+              "doc_rrf-fusion_zh"
+            ]
+          },
+          {
+            "q": "q_cosine-distance_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_cosine-distance_en",
+              "doc_rrf-fusion_en",
+              "dis_3"
+            ]
+          },
+          {
+            "q": "q_chunking-strategy_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_chunking-strategy_zh",
+              "doc_index-refresh_zh",
+              "doc_embed-batching_zh"
+            ]
+          },
+          {
+            "q": "q_chunking-strategy_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_chunking-strategy_en",
+              "doc_ob-paxos_en",
+              "doc_edge-privacy_en"
+            ]
+          },
+          {
+            "q": "q_index-refresh_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_index-refresh_zh",
+              "doc_seekdb-hnsw_zh",
+              "doc_edge-privacy_zh"
+            ]
+          },
+          {
+            "q": "q_index-refresh_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_index-refresh_en",
+              "dis_23",
+              "doc_seekdb-hybrid_en"
+            ]
+          },
+          {
+            "q": "q_edge-privacy_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_edge-privacy_zh",
+              "doc_embed-batching_zh",
+              "doc_int8-quantization_zh"
+            ]
+          },
+          {
+            "q": "q_edge-privacy_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_edge-privacy_en",
+              "doc_ob-paxos_en",
+              "doc_bge-embedding_en"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "wasm-q8",
+      "requestedBackend": "wasm",
+      "dtype": "q8",
+      "browserArgs": [],
+      "initialBadge": "推理后端：WebGPU（GPU 加速）",
+      "badge": "推理后端：WASM（CPU）",
+      "modelStatus": "bge-small-zh-v1.5 (ONNX, Xenova 导出) · q8 · 加载 127.0ms · 512 维",
+      "pageLoadToModelReadyMs": 2022,
+      "backendSwitchReloadMs": 560,
+      "coldRound": {
+        "timestamp": "2026-11-01T08:33:11.059Z",
+        "backend": "wasm",
+        "dtype": "q8",
+        "model": "bge-small-zh-v1.5 (ONNX, Xenova 导出)",
+        "corpusSize": 60,
+        "queryCount": 36,
+        "importTimings": {
+          "vectorizeMs": 2887.3,
+          "throughputPerSec": 20.8,
+          "writeMs": 17.2,
+          "refreshMs": 504.6
+        },
+        "metrics": {
+          "recall@5": 0.972,
+          "recall@10": 0.972,
+          "ndcg@10": 0.972,
+          "crossLangHitRate10": 0.417
+        },
+        "latencies": {
+          "embedMs": {
+            "median": 15,
+            "p90": 17.6
+          },
+          "seekdbMs": {
+            "median": 2.3,
+            "p90": 2.9
+          },
+          "e2eMs": {
+            "median": 18.5,
+            "p90": 21.2
+          }
+        },
+        "perQuery": [
+          {
+            "q": "q_ob-paxos_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_ob-paxos_zh",
+              "doc_mysql-protocol_zh",
+              "doc_seekdb-hybrid_zh"
+            ]
+          },
+          {
+            "q": "q_ob-paxos_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_ob-paxos_en",
+              "dis_23",
+              "doc_index-refresh_en"
+            ]
+          },
+          {
+            "q": "q_seekdb-hnsw_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_seekdb-hnsw_zh",
+              "doc_seekdb-hybrid_zh",
+              "doc_index-refresh_zh"
+            ]
+          },
+          {
+            "q": "q_seekdb-hnsw_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_seekdb-hnsw_en",
+              "doc_index-refresh_en",
+              "doc_seekdb-hybrid_en"
+            ]
+          },
+          {
+            "q": "q_seekdb-hybrid_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_seekdb-hybrid_zh",
+              "doc_seekdb-hnsw_zh",
+              "doc_mysql-protocol_zh"
+            ]
+          },
+          {
+            "q": "q_seekdb-hybrid_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_seekdb-hybrid_en",
+              "doc_mysql-protocol_en",
+              "doc_seekdb-hnsw_en"
+            ]
+          },
+          {
+            "q": "q_webgpu-standard_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_webgpu-standard_zh",
+              "doc_model-cache_zh",
+              "doc_seekdb-hybrid_zh"
+            ]
+          },
+          {
+            "q": "q_webgpu-standard_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_webgpu-standard_en",
+              "doc_transformers-js_en",
+              "doc_ob-paxos_en"
+            ]
+          },
+          {
+            "q": "q_ort-web-backends_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_ort-web-backends_zh",
+              "doc_transformers-js_zh",
+              "doc_edge-privacy_zh"
+            ]
+          },
+          {
+            "q": "q_ort-web-backends_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_ort-web-backends_en",
+              "doc_webgpu-standard_en",
+              "doc_transformers-js_en"
+            ]
+          },
+          {
+            "q": "q_int8-quantization_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_int8-quantization_zh",
+              "doc_embed-batching_zh",
+              "doc_bge-embedding_zh"
+            ]
+          },
+          {
+            "q": "q_int8-quantization_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_int8-quantization_en",
+              "doc_cosine-distance_en",
+              "doc_bge-embedding_en"
+            ]
+          },
+          {
+            "q": "q_transformers-js_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_transformers-js_zh",
+              "doc_webgpu-standard_zh",
+              "doc_transformers-js_en"
+            ]
+          },
+          {
+            "q": "q_transformers-js_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_transformers-js_en",
+              "doc_webgpu-standard_en",
+              "doc_bge-embedding_en"
+            ]
+          },
+          {
+            "q": "q_bge-embedding_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_bge-embedding_zh",
+              "doc_cosine-distance_zh",
+              "doc_seekdb-hnsw_zh"
+            ]
+          },
+          {
+            "q": "q_bge-embedding_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_bge-embedding_en",
+              "doc_cosine-distance_en",
+              "doc_rrf-fusion_en"
+            ]
+          },
+          {
+            "q": "q_rrf-fusion_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_rrf-fusion_zh",
+              "doc_seekdb-hybrid_zh",
+              "doc_cosine-distance_zh"
+            ]
+          },
+          {
+            "q": "q_rrf-fusion_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_rrf-fusion_en",
+              "doc_seekdb-hybrid_en",
+              "doc_ob-paxos_en"
+            ]
+          },
+          {
+            "q": "q_ik-analyzer_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_ik-analyzer_zh",
+              "doc_seekdb-hnsw_en",
+              "doc_seekdb-hybrid_zh"
+            ]
+          },
+          {
+            "q": "q_ik-analyzer_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_ik-analyzer_en",
+              "doc_seekdb-hybrid_en",
+              "doc_seekdb-hnsw_en"
+            ]
+          },
+          {
+            "q": "q_hnsw-params_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_hnsw-params_zh",
+              "doc_seekdb-hybrid_zh",
+              "doc_seekdb-hnsw_zh"
+            ]
+          },
+          {
+            "q": "q_hnsw-params_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_hnsw-params_en",
+              "doc_seekdb-hnsw_en",
+              "doc_chunking-strategy_en"
+            ]
+          },
+          {
+            "q": "q_mysql-protocol_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_mysql-protocol_zh",
+              "doc_seekdb-hybrid_zh",
+              "doc_edge-privacy_zh"
+            ]
+          },
+          {
+            "q": "q_mysql-protocol_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_mysql-protocol_en",
+              "doc_seekdb-hnsw_en",
+              "doc_seekdb-hybrid_en"
+            ]
+          },
+          {
+            "q": "q_embed-batching_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_embed-batching_zh",
+              "doc_edge-privacy_zh",
+              "doc_seekdb-hnsw_zh"
+            ]
+          },
+          {
+            "q": "q_embed-batching_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_embed-batching_en",
+              "doc_seekdb-hnsw_en",
+              "doc_chunking-strategy_en"
+            ]
+          },
+          {
+            "q": "q_model-cache_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_model-cache_zh",
+              "doc_int8-quantization_zh",
+              "doc_seekdb-hnsw_zh"
+            ]
+          },
+          {
+            "q": "q_model-cache_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_model-cache_en",
+              "doc_embed-batching_en",
+              "doc_int8-quantization_en"
+            ]
+          },
+          {
+            "q": "q_cosine-distance_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_cosine-distance_zh",
+              "doc_bge-embedding_zh",
+              "doc_rrf-fusion_zh"
+            ]
+          },
+          {
+            "q": "q_cosine-distance_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_cosine-distance_en",
+              "doc_rrf-fusion_en",
+              "doc_int8-quantization_en"
+            ]
+          },
+          {
+            "q": "q_chunking-strategy_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_chunking-strategy_zh",
+              "doc_index-refresh_zh",
+              "doc_embed-batching_zh"
+            ]
+          },
+          {
+            "q": "q_chunking-strategy_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_chunking-strategy_en",
+              "doc_ob-paxos_en",
+              "doc_ik-analyzer_en"
+            ]
+          },
+          {
+            "q": "q_index-refresh_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_index-refresh_zh",
+              "doc_edge-privacy_zh",
+              "doc_seekdb-hnsw_zh"
+            ]
+          },
+          {
+            "q": "q_index-refresh_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_index-refresh_en",
+              "dis_23",
+              "doc_seekdb-hybrid_en"
+            ]
+          },
+          {
+            "q": "q_edge-privacy_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_edge-privacy_zh",
+              "doc_embed-batching_zh",
+              "doc_int8-quantization_zh"
+            ]
+          },
+          {
+            "q": "q_edge-privacy_en",
+            "targetRank": null,
+            "top3": [
+              "doc_ob-paxos_en",
+              "doc_embed-batching_en",
+              "doc_bge-embedding_en"
+            ]
+          }
+        ]
+      },
+      "warmRound": {
+        "timestamp": "2026-11-01T08:33:15.292Z",
+        "backend": "wasm",
+        "dtype": "q8",
+        "model": "bge-small-zh-v1.5 (ONNX, Xenova 导出)",
+        "corpusSize": 60,
+        "queryCount": 36,
+        "importTimings": {
+          "vectorizeMs": 2840.8,
+          "throughputPerSec": 21.1,
+          "writeMs": 16.7,
+          "refreshMs": 606.9
+        },
+        "metrics": {
+          "recall@5": 1,
+          "recall@10": 1,
+          "ndcg@10": 1,
+          "crossLangHitRate10": 0.417
+        },
+        "latencies": {
+          "embedMs": {
+            "median": 14.6,
+            "p90": 17.4
+          },
+          "seekdbMs": {
+            "median": 2.1,
+            "p90": 2.3
+          },
+          "e2eMs": {
+            "median": 17.9,
+            "p90": 20.5
+          }
+        },
+        "perQuery": [
+          {
+            "q": "q_ob-paxos_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_ob-paxos_zh",
+              "doc_mysql-protocol_zh",
+              "doc_seekdb-hybrid_zh"
+            ]
+          },
+          {
+            "q": "q_ob-paxos_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_ob-paxos_en",
+              "dis_23",
+              "doc_index-refresh_en"
+            ]
+          },
+          {
+            "q": "q_seekdb-hnsw_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_seekdb-hnsw_zh",
+              "doc_seekdb-hybrid_zh",
+              "doc_index-refresh_zh"
+            ]
+          },
+          {
+            "q": "q_seekdb-hnsw_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_seekdb-hnsw_en",
+              "doc_index-refresh_en",
+              "doc_seekdb-hybrid_en"
+            ]
+          },
+          {
+            "q": "q_seekdb-hybrid_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_seekdb-hybrid_zh",
+              "doc_seekdb-hnsw_zh",
+              "doc_mysql-protocol_zh"
+            ]
+          },
+          {
+            "q": "q_seekdb-hybrid_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_seekdb-hybrid_en",
+              "doc_mysql-protocol_en",
+              "doc_seekdb-hnsw_en"
+            ]
+          },
+          {
+            "q": "q_webgpu-standard_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_webgpu-standard_zh",
+              "doc_model-cache_zh",
+              "doc_seekdb-hybrid_zh"
+            ]
+          },
+          {
+            "q": "q_webgpu-standard_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_webgpu-standard_en",
+              "dis_13",
+              "doc_transformers-js_en"
+            ]
+          },
+          {
+            "q": "q_ort-web-backends_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_ort-web-backends_zh",
+              "doc_transformers-js_zh",
+              "doc_edge-privacy_zh"
+            ]
+          },
+          {
+            "q": "q_ort-web-backends_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_ort-web-backends_en",
+              "doc_webgpu-standard_en",
+              "doc_transformers-js_en"
+            ]
+          },
+          {
+            "q": "q_int8-quantization_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_int8-quantization_zh",
+              "doc_embed-batching_zh",
+              "doc_bge-embedding_zh"
+            ]
+          },
+          {
+            "q": "q_int8-quantization_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_int8-quantization_en",
+              "doc_cosine-distance_en",
+              "doc_bge-embedding_en"
+            ]
+          },
+          {
+            "q": "q_transformers-js_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_transformers-js_zh",
+              "doc_webgpu-standard_zh",
+              "doc_transformers-js_en"
+            ]
+          },
+          {
+            "q": "q_transformers-js_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_transformers-js_en",
+              "doc_webgpu-standard_en",
+              "dis_13"
+            ]
+          },
+          {
+            "q": "q_bge-embedding_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_bge-embedding_zh",
+              "doc_cosine-distance_zh",
+              "doc_seekdb-hnsw_zh"
+            ]
+          },
+          {
+            "q": "q_bge-embedding_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_bge-embedding_en",
+              "doc_cosine-distance_en",
+              "doc_rrf-fusion_en"
+            ]
+          },
+          {
+            "q": "q_rrf-fusion_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_rrf-fusion_zh",
+              "doc_seekdb-hybrid_zh",
+              "doc_cosine-distance_zh"
+            ]
+          },
+          {
+            "q": "q_rrf-fusion_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_rrf-fusion_en",
+              "doc_seekdb-hybrid_en",
+              "doc_ob-paxos_en"
+            ]
+          },
+          {
+            "q": "q_ik-analyzer_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_ik-analyzer_zh",
+              "doc_seekdb-hnsw_en",
+              "doc_seekdb-hybrid_zh"
+            ]
+          },
+          {
+            "q": "q_ik-analyzer_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_ik-analyzer_en",
+              "doc_seekdb-hybrid_en",
+              "doc_seekdb-hnsw_en"
+            ]
+          },
+          {
+            "q": "q_hnsw-params_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_hnsw-params_zh",
+              "doc_seekdb-hybrid_zh",
+              "doc_seekdb-hnsw_zh"
+            ]
+          },
+          {
+            "q": "q_hnsw-params_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_hnsw-params_en",
+              "doc_seekdb-hnsw_en",
+              "doc_chunking-strategy_en"
+            ]
+          },
+          {
+            "q": "q_mysql-protocol_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_mysql-protocol_zh",
+              "doc_seekdb-hybrid_zh",
+              "doc_edge-privacy_zh"
+            ]
+          },
+          {
+            "q": "q_mysql-protocol_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_mysql-protocol_en",
+              "doc_seekdb-hnsw_en",
+              "doc_seekdb-hybrid_en"
+            ]
+          },
+          {
+            "q": "q_embed-batching_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_embed-batching_zh",
+              "doc_edge-privacy_zh",
+              "doc_seekdb-hnsw_zh"
+            ]
+          },
+          {
+            "q": "q_embed-batching_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_embed-batching_en",
+              "doc_edge-privacy_en",
+              "doc_seekdb-hnsw_en"
+            ]
+          },
+          {
+            "q": "q_model-cache_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_model-cache_zh",
+              "doc_int8-quantization_zh",
+              "doc_seekdb-hnsw_zh"
+            ]
+          },
+          {
+            "q": "q_model-cache_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_model-cache_en",
+              "doc_embed-batching_en",
+              "doc_int8-quantization_en"
+            ]
+          },
+          {
+            "q": "q_cosine-distance_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_cosine-distance_zh",
+              "doc_bge-embedding_zh",
+              "doc_rrf-fusion_zh"
+            ]
+          },
+          {
+            "q": "q_cosine-distance_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_cosine-distance_en",
+              "doc_rrf-fusion_en",
+              "doc_int8-quantization_en"
+            ]
+          },
+          {
+            "q": "q_chunking-strategy_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_chunking-strategy_zh",
+              "doc_index-refresh_zh",
+              "doc_embed-batching_zh"
+            ]
+          },
+          {
+            "q": "q_chunking-strategy_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_chunking-strategy_en",
+              "doc_ob-paxos_en",
+              "doc_edge-privacy_en"
+            ]
+          },
+          {
+            "q": "q_index-refresh_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_index-refresh_zh",
+              "doc_edge-privacy_zh",
+              "doc_seekdb-hnsw_zh"
+            ]
+          },
+          {
+            "q": "q_index-refresh_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_index-refresh_en",
+              "dis_23",
+              "doc_seekdb-hybrid_en"
+            ]
+          },
+          {
+            "q": "q_edge-privacy_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_edge-privacy_zh",
+              "doc_embed-batching_zh",
+              "doc_int8-quantization_zh"
+            ]
+          },
+          {
+            "q": "q_edge-privacy_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_edge-privacy_en",
+              "doc_ob-paxos_en",
+              "doc_embed-batching_en"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "nogpu-auto-fp16",
+      "requestedBackend": "auto",
+      "dtype": "fp16",
+      "browserArgs": [],
+      "initialBadge": "推理后端：WASM（CPU） · WebGPU 不可用，已自动降级",
+      "badge": "推理后端：WASM（CPU） · WebGPU 不可用，已自动降级",
+      "modelStatus": "bge-small-zh-v1.5 (ONNX, Xenova 导出) · fp16 · 加载 0.0ms · 512 维",
+      "pageLoadToModelReadyMs": 1662,
+      "backendSwitchReloadMs": 1,
+      "coldRound": {
+        "timestamp": "2026-11-01T08:33:23.517Z",
+        "backend": "wasm",
+        "dtype": "fp16",
+        "model": "bge-small-zh-v1.5 (ONNX, Xenova 导出)",
+        "corpusSize": 60,
+        "queryCount": 36,
+        "importTimings": {
+          "vectorizeMs": 2931.9,
+          "throughputPerSec": 20.5,
+          "writeMs": 17.7,
+          "refreshMs": 707.4
+        },
+        "metrics": {
+          "recall@5": 1,
+          "recall@10": 1,
+          "ndcg@10": 1,
+          "crossLangHitRate10": 0.417
+        },
+        "latencies": {
+          "embedMs": {
+            "median": 19,
+            "p90": 21.5
+          },
+          "seekdbMs": {
+            "median": 2.2,
+            "p90": 2.6
+          },
+          "e2eMs": {
+            "median": 22.5,
+            "p90": 24.8
+          }
+        },
+        "perQuery": [
+          {
+            "q": "q_ob-paxos_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_ob-paxos_zh",
+              "doc_mysql-protocol_zh",
+              "doc_edge-privacy_zh"
+            ]
+          },
+          {
+            "q": "q_ob-paxos_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_ob-paxos_en",
+              "dis_23",
+              "doc_webgpu-standard_en"
+            ]
+          },
+          {
+            "q": "q_seekdb-hnsw_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_seekdb-hnsw_zh",
+              "doc_seekdb-hybrid_zh",
+              "doc_index-refresh_zh"
+            ]
+          },
+          {
+            "q": "q_seekdb-hnsw_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_seekdb-hnsw_en",
+              "doc_index-refresh_en",
+              "doc_seekdb-hybrid_en"
+            ]
+          },
+          {
+            "q": "q_seekdb-hybrid_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_seekdb-hybrid_zh",
+              "doc_seekdb-hnsw_zh",
+              "doc_mysql-protocol_zh"
+            ]
+          },
+          {
+            "q": "q_seekdb-hybrid_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_seekdb-hybrid_en",
+              "doc_mysql-protocol_en",
+              "doc_seekdb-hnsw_en"
+            ]
+          },
+          {
+            "q": "q_webgpu-standard_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_webgpu-standard_zh",
+              "doc_model-cache_zh",
+              "doc_seekdb-hybrid_zh"
+            ]
+          },
+          {
+            "q": "q_webgpu-standard_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_webgpu-standard_en",
+              "doc_transformers-js_en",
+              "dis_13"
+            ]
+          },
+          {
+            "q": "q_ort-web-backends_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_ort-web-backends_zh",
+              "doc_transformers-js_zh",
+              "doc_transformers-js_en"
+            ]
+          },
+          {
+            "q": "q_ort-web-backends_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_ort-web-backends_en",
+              "doc_webgpu-standard_en",
+              "doc_ob-paxos_en"
+            ]
+          },
+          {
+            "q": "q_int8-quantization_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_int8-quantization_zh",
+              "doc_embed-batching_zh",
+              "doc_bge-embedding_zh"
+            ]
+          },
+          {
+            "q": "q_int8-quantization_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_int8-quantization_en",
+              "doc_cosine-distance_en",
+              "dis_17"
+            ]
+          },
+          {
+            "q": "q_transformers-js_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_transformers-js_zh",
+              "doc_webgpu-standard_zh",
+              "doc_transformers-js_en"
+            ]
+          },
+          {
+            "q": "q_transformers-js_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_transformers-js_en",
+              "doc_webgpu-standard_en",
+              "dis_13"
+            ]
+          },
+          {
+            "q": "q_bge-embedding_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_bge-embedding_zh",
+              "doc_bge-embedding_en",
+              "doc_cosine-distance_zh"
+            ]
+          },
+          {
+            "q": "q_bge-embedding_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_bge-embedding_en",
+              "doc_rrf-fusion_en",
+              "doc_cosine-distance_en"
+            ]
+          },
+          {
+            "q": "q_rrf-fusion_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_rrf-fusion_zh",
+              "doc_seekdb-hybrid_zh",
+              "doc_cosine-distance_zh"
+            ]
+          },
+          {
+            "q": "q_rrf-fusion_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_rrf-fusion_en",
+              "doc_ob-paxos_en",
+              "doc_seekdb-hybrid_en"
+            ]
+          },
+          {
+            "q": "q_ik-analyzer_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_ik-analyzer_zh",
+              "doc_seekdb-hnsw_en",
+              "doc_seekdb-hybrid_zh"
+            ]
+          },
+          {
+            "q": "q_ik-analyzer_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_ik-analyzer_en",
+              "doc_seekdb-hnsw_en",
+              "doc_seekdb-hybrid_en"
+            ]
+          },
+          {
+            "q": "q_hnsw-params_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_hnsw-params_zh",
+              "doc_seekdb-hybrid_zh",
+              "doc_hnsw-params_en"
+            ]
+          },
+          {
+            "q": "q_hnsw-params_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_hnsw-params_en",
+              "doc_seekdb-hnsw_en",
+              "doc_chunking-strategy_en"
+            ]
+          },
+          {
+            "q": "q_mysql-protocol_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_mysql-protocol_zh",
+              "doc_edge-privacy_zh",
+              "doc_mysql-protocol_en"
+            ]
+          },
+          {
+            "q": "q_mysql-protocol_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_mysql-protocol_en",
+              "doc_seekdb-hnsw_en",
+              "doc_seekdb-hybrid_en"
+            ]
+          },
+          {
+            "q": "q_embed-batching_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_embed-batching_zh",
+              "doc_edge-privacy_zh",
+              "doc_seekdb-hnsw_zh"
+            ]
+          },
+          {
+            "q": "q_embed-batching_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_embed-batching_en",
+              "doc_edge-privacy_en",
+              "doc_seekdb-hnsw_en"
+            ]
+          },
+          {
+            "q": "q_model-cache_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_model-cache_zh",
+              "doc_int8-quantization_zh",
+              "doc_seekdb-hnsw_zh"
+            ]
+          },
+          {
+            "q": "q_model-cache_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_model-cache_en",
+              "doc_ort-web-backends_en",
+              "doc_int8-quantization_en"
+            ]
+          },
+          {
+            "q": "q_cosine-distance_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_cosine-distance_zh",
+              "doc_bge-embedding_zh",
+              "doc_rrf-fusion_zh"
+            ]
+          },
+          {
+            "q": "q_cosine-distance_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_cosine-distance_en",
+              "doc_rrf-fusion_en",
+              "dis_3"
+            ]
+          },
+          {
+            "q": "q_chunking-strategy_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_chunking-strategy_zh",
+              "doc_index-refresh_zh",
+              "doc_embed-batching_zh"
+            ]
+          },
+          {
+            "q": "q_chunking-strategy_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_chunking-strategy_en",
+              "doc_ob-paxos_en",
+              "doc_edge-privacy_en"
+            ]
+          },
+          {
+            "q": "q_index-refresh_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_index-refresh_zh",
+              "doc_seekdb-hnsw_zh",
+              "doc_edge-privacy_zh"
+            ]
+          },
+          {
+            "q": "q_index-refresh_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_index-refresh_en",
+              "dis_23",
+              "doc_seekdb-hybrid_en"
+            ]
+          },
+          {
+            "q": "q_edge-privacy_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_edge-privacy_zh",
+              "doc_embed-batching_zh",
+              "doc_int8-quantization_zh"
+            ]
+          },
+          {
+            "q": "q_edge-privacy_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_edge-privacy_en",
+              "doc_ob-paxos_en",
+              "doc_bge-embedding_en"
+            ]
+          }
+        ]
+      },
+      "warmRound": {
+        "timestamp": "2026-11-01T08:33:27.956Z",
+        "backend": "wasm",
+        "dtype": "fp16",
+        "model": "bge-small-zh-v1.5 (ONNX, Xenova 导出)",
+        "corpusSize": 60,
+        "queryCount": 36,
+        "importTimings": {
+          "vectorizeMs": 2863.9,
+          "throughputPerSec": 21,
+          "writeMs": 19.7,
+          "refreshMs": 606.4
+        },
+        "metrics": {
+          "recall@5": 1,
+          "recall@10": 1,
+          "ndcg@10": 1,
+          "crossLangHitRate10": 0.417
+        },
+        "latencies": {
+          "embedMs": {
+            "median": 18.8,
+            "p90": 22
+          },
+          "seekdbMs": {
+            "median": 2.1,
+            "p90": 2.4
+          },
+          "e2eMs": {
+            "median": 22,
+            "p90": 25.3
+          }
+        },
+        "perQuery": [
+          {
+            "q": "q_ob-paxos_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_ob-paxos_zh",
+              "doc_mysql-protocol_zh",
+              "doc_edge-privacy_zh"
+            ]
+          },
+          {
+            "q": "q_ob-paxos_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_ob-paxos_en",
+              "dis_23",
+              "doc_webgpu-standard_en"
+            ]
+          },
+          {
+            "q": "q_seekdb-hnsw_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_seekdb-hnsw_zh",
+              "doc_seekdb-hybrid_zh",
+              "doc_index-refresh_zh"
+            ]
+          },
+          {
+            "q": "q_seekdb-hnsw_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_seekdb-hnsw_en",
+              "doc_index-refresh_en",
+              "doc_seekdb-hybrid_en"
+            ]
+          },
+          {
+            "q": "q_seekdb-hybrid_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_seekdb-hybrid_zh",
+              "doc_seekdb-hnsw_zh",
+              "doc_mysql-protocol_zh"
+            ]
+          },
+          {
+            "q": "q_seekdb-hybrid_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_seekdb-hybrid_en",
+              "doc_mysql-protocol_en",
+              "doc_seekdb-hnsw_en"
+            ]
+          },
+          {
+            "q": "q_webgpu-standard_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_webgpu-standard_zh",
+              "doc_model-cache_zh",
+              "doc_seekdb-hybrid_zh"
+            ]
+          },
+          {
+            "q": "q_webgpu-standard_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_webgpu-standard_en",
+              "doc_transformers-js_en",
+              "dis_13"
+            ]
+          },
+          {
+            "q": "q_ort-web-backends_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_ort-web-backends_zh",
+              "doc_transformers-js_zh",
+              "doc_transformers-js_en"
+            ]
+          },
+          {
+            "q": "q_ort-web-backends_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_ort-web-backends_en",
+              "doc_webgpu-standard_en",
+              "doc_transformers-js_en"
+            ]
+          },
+          {
+            "q": "q_int8-quantization_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_int8-quantization_zh",
+              "doc_embed-batching_zh",
+              "doc_bge-embedding_zh"
+            ]
+          },
+          {
+            "q": "q_int8-quantization_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_int8-quantization_en",
+              "doc_cosine-distance_en",
+              "dis_17"
+            ]
+          },
+          {
+            "q": "q_transformers-js_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_transformers-js_zh",
+              "doc_webgpu-standard_zh",
+              "doc_transformers-js_en"
+            ]
+          },
+          {
+            "q": "q_transformers-js_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_transformers-js_en",
+              "doc_webgpu-standard_en",
+              "dis_13"
+            ]
+          },
+          {
+            "q": "q_bge-embedding_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_bge-embedding_zh",
+              "doc_bge-embedding_en",
+              "doc_cosine-distance_zh"
+            ]
+          },
+          {
+            "q": "q_bge-embedding_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_bge-embedding_en",
+              "doc_rrf-fusion_en",
+              "doc_cosine-distance_en"
+            ]
+          },
+          {
+            "q": "q_rrf-fusion_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_rrf-fusion_zh",
+              "doc_seekdb-hybrid_zh",
+              "doc_cosine-distance_zh"
+            ]
+          },
+          {
+            "q": "q_rrf-fusion_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_rrf-fusion_en",
+              "doc_ob-paxos_en",
+              "doc_seekdb-hybrid_en"
+            ]
+          },
+          {
+            "q": "q_ik-analyzer_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_ik-analyzer_zh",
+              "doc_seekdb-hnsw_en",
+              "doc_seekdb-hybrid_zh"
+            ]
+          },
+          {
+            "q": "q_ik-analyzer_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_ik-analyzer_en",
+              "doc_seekdb-hnsw_en",
+              "doc_seekdb-hybrid_en"
+            ]
+          },
+          {
+            "q": "q_hnsw-params_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_hnsw-params_zh",
+              "doc_seekdb-hybrid_zh",
+              "doc_hnsw-params_en"
+            ]
+          },
+          {
+            "q": "q_hnsw-params_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_hnsw-params_en",
+              "doc_seekdb-hnsw_en",
+              "doc_chunking-strategy_en"
+            ]
+          },
+          {
+            "q": "q_mysql-protocol_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_mysql-protocol_zh",
+              "doc_edge-privacy_zh",
+              "doc_mysql-protocol_en"
+            ]
+          },
+          {
+            "q": "q_mysql-protocol_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_mysql-protocol_en",
+              "doc_seekdb-hnsw_en",
+              "doc_seekdb-hybrid_en"
+            ]
+          },
+          {
+            "q": "q_embed-batching_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_embed-batching_zh",
+              "doc_edge-privacy_zh",
+              "doc_seekdb-hnsw_zh"
+            ]
+          },
+          {
+            "q": "q_embed-batching_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_embed-batching_en",
+              "doc_edge-privacy_en",
+              "doc_seekdb-hnsw_en"
+            ]
+          },
+          {
+            "q": "q_model-cache_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_model-cache_zh",
+              "doc_int8-quantization_zh",
+              "doc_seekdb-hnsw_zh"
+            ]
+          },
+          {
+            "q": "q_model-cache_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_model-cache_en",
+              "doc_ort-web-backends_en",
+              "doc_int8-quantization_en"
+            ]
+          },
+          {
+            "q": "q_cosine-distance_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_cosine-distance_zh",
+              "doc_bge-embedding_zh",
+              "doc_rrf-fusion_zh"
+            ]
+          },
+          {
+            "q": "q_cosine-distance_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_cosine-distance_en",
+              "doc_rrf-fusion_en",
+              "doc_int8-quantization_en"
+            ]
+          },
+          {
+            "q": "q_chunking-strategy_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_chunking-strategy_zh",
+              "doc_index-refresh_zh",
+              "doc_embed-batching_zh"
+            ]
+          },
+          {
+            "q": "q_chunking-strategy_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_chunking-strategy_en",
+              "doc_ob-paxos_en",
+              "doc_edge-privacy_en"
+            ]
+          },
+          {
+            "q": "q_index-refresh_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_index-refresh_zh",
+              "doc_seekdb-hnsw_zh",
+              "doc_edge-privacy_zh"
+            ]
+          },
+          {
+            "q": "q_index-refresh_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_index-refresh_en",
+              "dis_23",
+              "doc_seekdb-hybrid_en"
+            ]
+          },
+          {
+            "q": "q_edge-privacy_zh",
+            "targetRank": 1,
+            "top3": [
+              "doc_edge-privacy_zh",
+              "doc_embed-batching_zh",
+              "doc_int8-quantization_zh"
+            ]
+          },
+          {
+            "q": "q_edge-privacy_en",
+            "targetRank": 1,
+            "top3": [
+              "doc_edge-privacy_en",
+              "doc_ob-paxos_en",
+              "doc_bge-embedding_en"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

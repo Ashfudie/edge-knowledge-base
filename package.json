@@ -1,0 +1,32 @@
+{
+  "name": "edge-knowledge-base",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "端侧迷你知识库：浏览器本地向量化（Transformers.js · WebGPU/WASM · FP16/INT8 量化）+ seekdb 向量与全文混合检索",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "download-models": "node scripts/download-models.mjs",
+    "download-models-fp32": "node scripts/download-models.mjs --fp32",
+    "dev": "vite --config web/vite.config.js",
+    "build": "vite build --config web/vite.config.js",
+    "start": "node server/index.mjs",
+    "size-report": "node scripts/size-report.mjs"
+  },
+  "dependencies": {
+    "@oceanbase/seekdb-node": "^1.4.0",
+    "seekdb": "^1.4.0"
+  },
+  "devDependencies": {
+    "@huggingface/transformers": "^3.7.0",
+    "playwright-core": "^1.64.1",
+    "vite": "^6.3.0"
+  },
+  "comments": {
+    "install-note": "上游 @seekdb/default-embed 的 peerDependencies 误带 workspace:* 协议，需用 --legacy-peer-deps 安装",
+    "seekdb": "seekdb npm 包 = seekdb-js SDK（Collection API，服务端模式）",
+    "@oceanbase/seekdb-node": "本地 seekdb 运行时（随应用启动本地 server 进程，MySQL 协议）"
+  }
+}

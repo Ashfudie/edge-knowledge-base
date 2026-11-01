@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>端侧知识库 · seekdb 混合检索</title>
+  <link rel="stylesheet" href="./src/style.css" />
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <h1>端侧知识库</h1>
+      <span class="sub">浏览器本地向量化 · seekdb 向量+全文混合检索</span>
+    </div>
+    <div class="status-bar">
+      <span id="backend-badge" class="badge loading">推理后端检测中…</span>
+      <label class="ctl">精度
+        <select id="precision-select">
+          <option value="fp16" selected>FP16（默认）</option>
+          <option value="q8">INT8 (q8)</option>
+          <option value="fp32">FP32（基线）</option>
+        </select>
+      </label>
+      <label class="ctl">后端
+        <select id="backend-select">
+          <option value="auto" selected>自动（WebGPU 优先）</option>
+          <option value="webgpu">强制 WebGPU</option>
+          <option value="wasm">强制 WASM</option>
+        </select>
+      </label>
+      <span id="model-status" class="model-status"></span>
+    </div>
+  </header>
+
+  <main>
+    <section class="left">
+      <div class="panel">
+        <h2>知识库集合</h2>
+        <div class="row">
+          <input id="new-collection-name" placeholder="新集合名，如 kb_docs" />
+          <button id="btn-create-collection">创建</button>
+        </div>
+        <ul id="collection-list" class="collection-list"></ul>
+        <div class="row small-actions">
+          <button id="btn-refresh-collections" class="ghost">刷新列表</button>
+          <button id="btn-refresh-index" class="ghost">手动刷新索引</button>
+          <button id="btn-delete-collection" class="ghost danger">删除当前集合</button>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h2>导入文档</h2>
+        <div class="hint">粘贴文本或选择 .txt / .md 文件。文档将分块后在<b>浏览器本地</b>向量化，再连同原文写入 seekdb。</div>
+        <textarea id="import-text" rows="5" placeholder="在此粘贴文本…（每个空行分隔的段落块超过阈值时会自动再切分）"></textarea>
+        <div class="row">
+          <input type="file" id="import-files" multiple accept=".txt,.md,.markdown,.json" />
+        </div>
+        <div class="row">
+          <label class="ctl">块大小 <input id="chunk-size" type="number" value="500" min="80" max="2000" step="20" /> 字符</label>
+          <label class="ctl">批大小 <input id="batch-size" type="number" value="16" min="1" max="64" /> 条/批</label>
+        </div>
+        <button id="btn-import" class="primary" disabled>开始导入（向量化 → 写入 seekdb）</button>
+        <div id="import-progress" class="progress hidden">
+          <div class="progress-bar"><div id="import-progress-fill"></div></div>
+          <div id="import-progress-text" class="mono"></div>
+        </div>
+        <div id="import-summary" class="summary hidden"></div>
+      </div>
+    </section>
+
+    <section class="right">
+      <div class="panel">
+        <h2>混合检索</h2>
+        <div class="row">
+          <input id="query-input" placeholder="输入查询，回车或点击检索…" />
+          <button id="btn-search" class="primary">检索</button>
+        </div>
+        <div class="row">
+          <label class="ctl">模式
+            <select id="search-mode">
+              <option value="hybrid" selected>混合（向量+全文，RRF 库内融合）</option>
+              <option value="knn">仅向量</option>
+              <option value="fulltext">仅全文</option>
+            </select>
+          </label>
+          <label class="ctl">TopK <input id="topk" type="number" value="8" min="1" max="50" /></label>
+          <span id="search-collection-tag" class="tag"></span>
+        </div>
+        <div id="search-timings" class="timings hidden"></div>
+        <div id="search-results"></div>
+      </div>
+
+      <div class="panel">
+        <h2>评测 <span class="hint-inline">（Recall@K / nDCG@K / 分阶段延迟，来自本应用实际运行）</span></h2>
+        <div class="row">
+          <button id="btn-benchmark" class="primary">载入评测集并运行</button>
+          <span id="benchmark-status" class="mono"></span>
+          <button id="btn-export-results" class="ghost hidden">导出全部结果 JSON</button>
+        </div>
+        <div id="benchmark-output"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>推理发生在你的设备上：无云端 API · 检索由 seekdb 执行 · 模型 bge-small-zh-v1.5 (ONNX)</span>
+  </footer>
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+node_modules/
+data/
+web/dist/
+*.log
+.DS_Store
+# FP32 基线权重（约 90MB）不入库，按需执行 npm run download-models-fp32 获取
+web/public/models/bge-small-zh-v1.5/onnx/model.onnx

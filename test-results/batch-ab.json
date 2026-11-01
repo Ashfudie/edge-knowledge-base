@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "note": "embedding 批处理优化对比：同一批 48 块文本在应用导入流程中实测（FP16 + WebGPU，Chrome 156，macOS Apple Silicon）",
+    "timestamp": "2026-11-01T08:55:00+08:00",
+    "script": "scripts/batch-ab.mjs"
+  },
+  "results": [
+    { "batchSize": 1, "throughputPerSec": 106.8 },
+    { "batchSize": 4, "throughputPerSec": 500.0 },
+    { "batchSize": 16, "throughputPerSec": 626.6 },
+    { "batchSize": 32, "throughputPerSec": 609.1 }
+  ],
+  "conclusion": "批大小 16 时吞吐最优，相对逐条推理提升 5.9 倍；32 时略降（GPU 内存压力/填充率）。应用默认批大小 16（UI 可调）。"
+}
